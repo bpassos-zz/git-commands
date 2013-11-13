@@ -9,7 +9,7 @@ Small intro about git
 
 #### Install Git 
 
-Click ![here](http://git-scm.com/download/mac) to download and install Git
+Click * [here](http://git-scm.com/download/mac) to download and install Git
 
 #### Setting up git
 
