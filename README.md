@@ -1,15 +1,19 @@
 #Useful Git Commands
 
 ##About it
-This is a lits of useful Git commands and descritptions I have built up with time.
+I have recently started using git professionally and on a daily basis and I really don't look back! This is a lits of useful Git commands and descritptions I have put together which helps me quickly find stuff I need.
 
 #### Git 
 
-Small intro about git
+Git is a distributed version control system, very easy to learn and supper fast!
 
 #### Install Git 
 
-Click * [here](http://git-scm.com/download/mac) to download and install Git
+There are a few different ways to install git (from source or for Lynux) but the pupose of this page is to focus on git commands, so I am going to assume you are installing git on a Mac.
+
+To view other ways of installing it visit the [Git official site](http://git-scm.com/book/en/Getting-Started-Installing-Git)
+
+Click [here](http://git-scm.com/download/mac) to download and install Git
 
 #### Setting up git
 
