@@ -29,3 +29,11 @@ $ git config --global user.email "email"
 ```sh
 $ git config --global color.ui true
 ```
+
+#### Innitializing a repository in an existing directory
+
+If you’re starting to track an existing project in Git, you need to go to the project’s directory and type:
+
+```sh
+$ git init
+```
