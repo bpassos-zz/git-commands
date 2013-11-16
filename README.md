@@ -46,6 +46,31 @@ $ git add *.c
 $ git add README
 $ git commit -m 'Initial project version'
 ```
+#### Checking the Status of Your Files
+
+The main tool you use to determine which files are in which state is the `$ git status` command. If you run this command directly after a clone, you should see something like this:
+
+```sh
+$ git status
+# On branch master
+nothing to commit (working directory clean)
+```
+
+If you add a new file to your project, if the file didn\'\t exist before and you run a `$ git status` you should see your untracked file like this:
+
+```sh
+$ vim README
+$ git status
+# On branch master
+# Untracked files:
+#   (use "git add <file>..." to include in what will be committed)
+#
+#   README
+nothing added to commit but untracked files present (use "git add" to track)
+```
+
+
+
 
 
 
