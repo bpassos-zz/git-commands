@@ -3,6 +3,14 @@
 ##About it
 I have recently started using git professionally and on a daily basis and I really don't look back! This is a lits of useful Git commands and descritptions I have put together which helps me quickly find stuff I need.
 
+## Table of contents
+
+* [Install Git](#Install-Git)
+* [Setting up git](#Setting-up-git)
+* [Applying colour to git ](#Applying-colour-to-git)
+* [Innitializing a repository in an existing directory](#Innitializing-a-repository-in-an-existing-directory)
+* [Checking the Status of Your Files](#Checking-the-Status-of-Your-Files)
+
 #### Git 
 
 Git is a distributed version control system, very easy to learn and supper fast!
