@@ -5,11 +5,11 @@ I have recently started using git professionally and on a daily basis and I real
 
 ## Table of contents
 
-* [Install Git](#Install-Git)
-* [Setting up git](#Setting-up-git)
-* [Applying colour to git ](#Applying-colour-to-git)
-* [Innitializing a repository in an existing directory](#Innitializing-a-repository-in-an-existing-directory)
-* [Checking the Status of Your Files](#Checking-the-Status-of-Your-Files)
+* [Install Git](#install-git)
+* [Setting up git](#setting-up-git)
+* [Applying colour to git ](#applying-colour-to-git)
+* [Initializing a repository in an existing directory](#initializing-a-repository-in-an-existing-directory)
+* [Checking the Status of Your Files](#checking-the-status-of-your-files)
 
 #### Git 
 
@@ -38,7 +38,7 @@ $ git config --global user.email "email"
 $ git config --global color.ui true
 ```
 
-#### Innitializing a repository in an existing directory
+#### Initializing a repository in an existing directory
 
 If you’re starting to track an existing project in Git, you need to go to the project’s directory and type:
 
