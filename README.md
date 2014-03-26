@@ -5,11 +5,11 @@ I have recently started using git professionally and on a daily basis and I real
 
 ## Table of contents
 
-* [Install Git](#install-git)
+* [Install git](#install-git)
 * [Setting up git](#setting-up-git)
 * [Applying colour to git ](#applying-colour-to-git)
 * [Initializing a repository in an existing directory](#initializing-a-repository-in-an-existing-directory)
-* [Checking the Status of Your Files](#checking-the-status-of-your-files)
+* [Checking the status of your files](#checking-the-status-of-your-files)
 
 #### Git 
 
@@ -77,11 +77,56 @@ $ git status
 nothing added to commit but untracked files present (use "git add" to track)
 ```
 
+#### Branching and merging
 
+Creating a local branch
 
+```sh
+$ git checkout -b branchname
+```
 
+Deleting a local branch
 
+```sh
+$ git branch -D branchname
+```
 
+Viewing all branches, including local and remote branches
+
+```sh
+$ git branch -a
+```
+
+Viewing local branches
+
+```sh
+$ git branch
+```
+
+Viewing remote branches
+
+```sh
+$ git branch -r
+```
+
+##### Fetching and checking out remote branches
+
+```sh
+$ git fetch origin
+```
+
+This will fetch all of the remote branches for you. With the remote branches in hand, you now need to check out the branch you are interested in, giving you a local working copy:
+
+```sh
+$ git checkout -b test origin/test
+```
+Deleting a remote branch
+
+```sh
+$ git branch -rd origin/branchname
+
+$ git push origin --delete branchname  or  $ git push origin:branchname
+```
 
 
 
