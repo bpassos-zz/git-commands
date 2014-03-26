@@ -78,6 +78,35 @@ $ git status
 nothing added to commit but untracked files present (use "git add" to track)
 ```
 
+#### Staging files
+
+After initializing a git repository in the chosen directory, all files will now be tracked. Any changes made to any file will be shown after a $ git status as changes not staged for commit.
+
+To stage changes for commit you need to add the file(s) - or in other words, stage file(s).
+
+```sh
+# Adding a file
+$ git add filename
+
+# Adding all file
+$ git add -a
+
+# Adding a all files changes in a directory
+$ git add .
+```
+
+#### Committing files
+
+After adding/staging a file, the next step is to commit staged file(s)
+
+```sh
+# Commit staged file(s)
+$ git commit -m 'commit message'
+
+# Amending a commit
+$ git commit --amend 'new commit message' or no message to maintain previous message
+
+
 #### Branching and merging
 
 Creating a local branch
@@ -138,8 +167,13 @@ $ git checkout trunk/master
 
 # Now merge branch to trunk/master
 $ git merge branchname
+
+# To cancel a merge
+$ git merge --abort
 ```
 
+
+##### Resetting HEAD
 
 
 
