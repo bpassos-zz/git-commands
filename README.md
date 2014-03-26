@@ -112,6 +112,7 @@ $ git branch -r
 
 ##### Fetching and checking out remote branches
 
+
 ```sh
 $ git fetch origin
 ```
@@ -127,6 +128,16 @@ Deleting a remote branch
 $ git branch -rd origin/branchname
 
 $ git push origin --delete branchname  or  $ git push origin:branchname
+```
+
+##### Merging branch to trunk/master
+
+```sh
+# First checkout trunk/master
+$ git checkout trunk/master
+
+# Now merge branch to trunk/master
+$ git merge branchname
 ```
 
 
