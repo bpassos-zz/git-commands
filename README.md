@@ -10,8 +10,8 @@ I have recently started using git professionally and on a daily basis and I real
 * [Applying colour to git ](#applying-colour-to-git)
 * [Initializing a repository in an existing directory](#initializing-a-repository-in-an-existing-directory)
 * [Checking the status of your files](#checking-the-status-of-your-files)
-* [Staging files](#Staging-files)
-* [Committing files](#Committing-files)
+* [Staging files](#staging-files)
+* [Committing files](#committing-files)
 * [Branching and merging](#branching-and-merging)
 
 #### Git 
