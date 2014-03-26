@@ -105,7 +105,7 @@ $ git commit -m 'commit message'
 
 # Amending a commit
 $ git commit --amend 'new commit message' or no message to maintain previous message
-
+```
 
 #### Branching and merging
 
