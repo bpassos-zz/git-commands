@@ -13,6 +13,7 @@ I have recently started using git professionally and on a daily basis and I real
 * [Staging files](#staging-files)
 * [Committing files](#committing-files)
 * [Branching and merging](#branching-and-merging)
+* [Contributing](#contributing)
 
 #### Git 
 
