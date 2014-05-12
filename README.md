@@ -178,6 +178,24 @@ $ git merge --abort
 
 ##### Resetting HEAD
 
+```sh
+# Upstream master
+$ git reset HEAD origin/master -- filename
+
+# The version from the most recent commit
+$ git reset HEAD -- filename
+
+# The version before the most recent commit
+$ git reset HEAD^ -- filename
+
+# Move head to specific commit
+$ git reset --hard sha
+
+# Reset the staging area and the working directory to match the most recent commit. In addition to unstaging changes, the --hard flag tells Git to overwrite all changes in the working directory, too.
+$ git reset --hard
+```
+
+
 ### Contributing
 
 1. Fork it!
