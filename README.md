@@ -59,7 +59,7 @@ $ git add *.c
 $ git add README
 $ git commit -m 'Initial project version'
 ```
-#### Checking the Status of Your Files
+#### Checking the status of your files
 
 The main tool you use to determine which files are in which state is the `$ git status` command. If you run this command directly after a clone, you should see something like this:
 
