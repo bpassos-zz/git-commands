@@ -119,6 +119,12 @@ Creating a local branch
 $ git checkout -b branchname
 ```
 
+Pushing local branch to remote
+
+```sh
+$ git push -u origin branchname
+```
+
 Deleting a local branch
 
 ```sh
