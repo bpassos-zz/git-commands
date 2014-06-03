@@ -1,7 +1,7 @@
 #Useful Git Commands
 
 ##About it
-I have recently started using git professionally and on a daily basis and I really don't look back! This is a lits of useful Git commands and descritptions I have put together which helps me quickly find stuff I need.
+> I have recently started using git professionally and on a daily basis and I really don't look back! This is a lits of useful Git commands and descritptions I have put together which helps me quickly find stuff I need.
 
 ## Table of contents
 
