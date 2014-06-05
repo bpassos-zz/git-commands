@@ -1,7 +1,7 @@
 #Useful Git Commands
 
 ##About it
-> I have recently started using git professionally and on a daily basis and I really don't look back! This is a lits of useful Git commands and descritptions I have put together which helps me quickly find stuff I need.
+> Have you recently started using Git? This should give you the base commands you need to perform the most common actions in Git. If you find a command that is not here, or could be explained better, please dont hesitate in * [Contributing](#contributing). Cheers!
 
 ## Table of contents
 
