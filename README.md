@@ -14,7 +14,7 @@
 * [Committing files](#committing-files)
 * [Branching and merging](#branching-and-merging)
 * [Resetting HEAD](#resetting-head)
-* [Useful tricks](#useful-commandsg)
+* [Useful tricks](#useful-commands)
 * [Contributing](#contributing)
 
 #### Git 
