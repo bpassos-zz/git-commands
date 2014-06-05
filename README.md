@@ -202,6 +202,23 @@ $ git reset --hard sha
 $ git reset --hard
 ```
 
+##### Useful commands 
+
+```sh
+## Number os commits by author
+$ git shortlog -s --author 'Author Name'
+
+# List of commits by author
+$ git log --author 'Author Name'
+
+# List of commit comments by author
+$ git shortlog -n --author 'Author Name'
+This also shows the total number of commits by the author
+
+# Number of commits by contributors
+$ git shortlog -s -n
+```
+
 
 ### Contributing
 
