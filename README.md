@@ -207,7 +207,6 @@ $ git reset --hard
 
 ```sh
 # Number os commits by author
->>>>>>> Moar git commands
 $ git shortlog -s --author 'Author Name'
 
 # List of commits by author
