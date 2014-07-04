@@ -188,9 +188,12 @@ $ git merge --abort
 ```
 
 
-##### Resetting HEAD
+##### Resetting
 
 ```sh
+# Mixes your head with a give sha
+$ git reset --mixed [sha]
+
 # Upstream master
 $ git reset HEAD origin/master -- filename
 
