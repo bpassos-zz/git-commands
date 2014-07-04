@@ -93,11 +93,15 @@ To stage changes for commit you need to add the file(s) - or in other words, sta
 # Adding a file
 $ git add filename
 
-# Adding all file
+# Adding all files
 $ git add -A
 
 # Adding a all files changes in a directory
 $ git add .
+
+# Choosing what changes to add (this will got through all your changes and you can 'Y' or 'N' the changes)
+$ git add -p
+
 ```
 
 #### Committing files
