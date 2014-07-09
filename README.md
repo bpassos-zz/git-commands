@@ -70,10 +70,9 @@ $ git status
 nothing to commit (working directory clean)
 ```
 
-If you add a new file to your project, if the file didn\'\t exist before and you run a `$ git status` you should see your untracked file like this:
+If you add a new file to your project, and the file didn't exist before, when you run a `$ git status` you should see your untracked file like this:
 
 ```sh
-$ vim README
 $ git status
 # On branch master
 # Untracked files:
