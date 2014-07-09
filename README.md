@@ -13,7 +13,7 @@
 * [Staging files](#staging-files)
 * [Committing files](#committing-files)
 * [Branching and merging](#branching-and-merging)
-* [Resetting HEAD](#resetting-head)
+* [Resetting HEAD](#resetting)
 * [Useful tricks](#useful-commands)
 * [Contributing](#contributing)
 
