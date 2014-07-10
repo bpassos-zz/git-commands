@@ -155,12 +155,13 @@ $ git branch -r
 
 ##### Fetching and checking out remote branches
 
+This will fetch all of the remote branches for you.
 
 ```sh
 $ git fetch origin
 ```
 
-This will fetch all of the remote branches for you. With the remote branches in hand, you now need to check out the branch you are interested in, giving you a local working copy:
+With the remote branches in hand, you now need to check out the branch you are interested in, giving you a local working copy:
 
 ```sh
 $ git checkout -b test origin/test
