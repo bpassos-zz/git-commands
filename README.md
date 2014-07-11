@@ -216,6 +216,9 @@ $ git reset --hard
 # Number os commits by author
 $ git shortlog -s --author 'Author Name'
 
+# List of commits showing commit messages and changes
+$ git log -p
+
 # List of commits by author
 $ git log --author 'Author Name'
 
