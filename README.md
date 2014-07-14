@@ -214,10 +214,10 @@ $ git reset --hard
 ##### Git remote 
 
 ```sh
-# Show where origin is pointing to and also tracked branches
+# Show where 'origin' is pointing to and also tracked branches
 $ git remote show origin
 
-# Show where origin is pointing to
+# Show where 'origin' is pointing to
 $ git remote -v
 
 # Change the 'origin' remote's URL
