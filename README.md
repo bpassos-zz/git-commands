@@ -222,7 +222,7 @@ $ git remote -v
 
 # Change the 'origin' remote's URL
 $ git remote set-url origin https://github.com/user/repo.git
-
+```
 
 ##### Useful commands 
 
