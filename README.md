@@ -14,7 +14,8 @@
 * [Committing files](#committing-files)
 * [Branching and merging](#branching-and-merging)
 * [Resetting](#resetting)
-* [Useful tricks](#useful-commands)
+* [Git remote](#git-remote)
+* [Useful Commands](#useful-commands)
 * [Contributing](#contributing)
 
 #### Git 
@@ -209,6 +210,19 @@ $ git reset --hard sha
 # Reset the staging area and the working directory to match the most recent commit. In addition to unstaging changes, the --hard flag tells Git to overwrite all changes in the working directory, too.
 $ git reset --hard
 ```
+
+##### Git remote 
+
+```sh
+# Show where origin is pointing to and also tracked branches
+$ git remote show origin
+
+# Show where origin is pointing to
+$ git remote -v
+
+# Change the 'origin' remote's URL
+$ git remote set-url origin https://github.com/user/repo.git
+
 
 ##### Useful commands 
 
