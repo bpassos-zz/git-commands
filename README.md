@@ -199,6 +199,11 @@ $ git merge branchname
 $ git merge --abort
 ```
 
+##### Tracking existing branch
+
+```sh
+$ git branch --set-upstream-to=origin/foo foo
+```
 
 ##### Resetting
 
