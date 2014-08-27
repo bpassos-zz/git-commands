@@ -16,6 +16,7 @@
 * [Resetting](#resetting)
 * [Git remote](#git-remote)
 * [Useful Commands](#useful-commands)
+* [Checking what you are commiting](#checking-what-you-are-commiting)
 * [Contributing](#contributing)
 
 #### Git 
@@ -101,7 +102,6 @@ $ git add .
 
 # Choosing what changes to add (this will got through all your changes and you can 'Y' or 'N' the changes)
 $ git add -p
-
 ```
 
 #### Committing files
@@ -111,6 +111,9 @@ After adding/staging a file, the next step is to commit staged file(s)
 ```sh
 # Commit staged file(s)
 $ git commit -m 'commit message'
+
+# Add file and commit staged file
+$ git commit -am 'insert commit message'
 
 # Amending a commit
 $ git commit --amend 'new commit message' or no message to maintain previous message
@@ -258,6 +261,22 @@ $ git shortlog -n --author 'Author Name'
 
 # Number of commits by contributors
 $ git shortlog -s -n
+
+# Undo local changes to a File
+$ git checkout -- <file>
+
+```
+
+
+##### Checking what you are commiting 
+
+```sh
+# See all (non-staged) changes done to a local repo 
+$ git diff
+
+# Check what the changes between the files you've commited and the live repo
+$ git diff --stat origin/master
+
 ```
 
 
