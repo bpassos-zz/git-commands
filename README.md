@@ -1,3 +1,8 @@
+<img
+  src="/img/git.png"
+  width="156"
+  align="right"
+/>
 #Useful Git Commands
 <img
   src="/img/git.png"
