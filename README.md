@@ -1,4 +1,9 @@
 #Useful Git Commands
+<img
+  src="/img/git.png"
+  width="156"
+  align="right"
+/>
 
 ##About it
 > Have you recently started using Git? This should give you the base commands you need to perform the most common actions in Git. If you find a command that is not here, or could be explained better, please dont hesitate in * [Contributing](#contributing). Cheers!
