@@ -1,6 +1,6 @@
 <img
   src="/img/git.png"
-  width="156"
+  width="70"
   align="right"
 />
 #Useful Git Commands
