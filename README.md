@@ -268,7 +268,7 @@ $ git shortlog -n --author 'Author Name'
 $ git shortlog -s -n
 
 # Undo local changes to a File
-$ git checkout -- <file>
+$ git checkout -- filename
 
 ```
 
