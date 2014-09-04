@@ -16,6 +16,7 @@
 * [Initializing a repository in an existing directory](#initializing-a-repository-in-an-existing-directory)
 * [Checking the status of your files](#checking-the-status-of-your-files)
 * [Staging files](#staging-files)
+* [Stashing files](#stashing-files)
 * [Committing files](#committing-files)
 * [Branching and merging](#branching-and-merging)
 * [Resetting](#resetting)
