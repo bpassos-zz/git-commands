@@ -239,6 +239,7 @@ $ git branch --set-upstream-to=origin/foo foo
 
 ```sh
 # Mixes your head with a give sha
+# This lets you do things like split a commit
 $ git reset --mixed [sha]
 
 # Upstream master
