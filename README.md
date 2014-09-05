@@ -112,7 +112,7 @@ $ git add -p
 
 #### Stashing files
 
-Git stash is a very useful command, where git will 'hide' the changes on a dirty directory - but no worries you can reapply them later. The command will save your local changes away and revert the working directory to match the HEAD commit. [More on git stash](http://git-scm.com/book/en/Git-Tools-Stashing).
+Git stash is a very useful command, where git will 'hide' the changes on a dirty directory - but no worries you can reapply them later. The command will save your local changes away and revert the working directory to match the HEAD commit.
 
 ```sh
 # Stash local changes
@@ -121,10 +121,10 @@ $ git stash
 # Stash local changes with a custom message
 $ git stash save "this is your custom message"
 
-# Reaplly the changes you saved in your latest stash
+# Re-aplly the changes you saved in your latest stash
 $ git stash apply
 
-# Reaplly the changes you saved in a given stash number
+# Re-aplly the changes you saved in a given stash number
 $ git stash apply stash@{stash_number}
 
 # Drops any stash by its number
@@ -133,7 +133,7 @@ $ git stash drop stash@{0}
 # Apply the stash and then immediately drop it from your stack
 $ git stash pop
 
-# You can pop a especific stash by informing its number
+# 'Release' a particular stash from your list of stashes
 $ git stash pop stash@{stash_number}
 
 # List all stashes
