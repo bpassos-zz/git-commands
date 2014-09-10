@@ -21,8 +21,9 @@
 * [Branching and merging](#branching-and-merging)
 * [Resetting](#resetting)
 * [Git remote](#git-remote)
-* [Useful Commands](#useful-commands)
 * [Checking what you are commiting](#checking-what-you-are-commiting)
+* [Useful Commands](#useful-commands)
+* [Useful Alias](#useful-alias)
 * [Contributing](#contributing)
 
 #### Git 
@@ -288,6 +289,17 @@ $ git remote -v
 $ git remote set-url origin https://github.com/user/repo.git
 ```
 
+##### Checking what you are commiting 
+
+```sh
+# See all (non-staged) changes done to a local repo 
+$ git diff
+
+# Check what the changes between the files you've commited and the live repo
+$ git diff --stat origin/master
+
+```
+
 ##### Useful commands 
 
 ```sh
@@ -315,18 +327,14 @@ $ git checkout -- filename
 
 ```
 
-
-##### Checking what you are commiting 
+##### Useful alias
+## To add an alias simply open your .gitconfi file on your home directory and include the alias code
 
 ```sh
-# See all (non-staged) changes done to a local repo 
-$ git diff
-
-# Check what the changes between the files you've commited and the live repo
-$ git diff --stat origin/master
+# shows the log in a more consised way with the graph for branching and merging
+lg = log --color --graph --pretty=format:'%Cred%h%Creset -%C(yellow)%d%Creset %s %Cgreen(%cr) %C(bold blue)<%an>%Creset' --abbrev-commit
 
 ```
-
 
 ### Contributing
 
