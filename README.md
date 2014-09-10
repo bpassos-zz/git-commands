@@ -300,6 +300,9 @@ $ git log -p
 # List of commits by author
 $ git log --author 'Author Name'
 
+# Shows a list of commits with a graph illustrating the history
+$ git log --graph
+
 # List of commit comments by author
 $ git shortlog -n --author 'Author Name'
 #This also shows the total number of commits by the author
