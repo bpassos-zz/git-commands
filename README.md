@@ -325,6 +325,9 @@ $ git shortlog -s -n
 # Undo local changes to a File
 $ git checkout -- filename
 
+# Shows more detailed info about a commit
+$ git cat-file sha -p
+
 ```
 
 ##### Useful alias
