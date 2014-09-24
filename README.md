@@ -157,6 +157,9 @@ After adding/staging a file, the next step is to commit staged file(s)
 # Commit staged file(s)
 $ git commit -m 'commit message'
 
+# Add file and commit
+$ git commit filename -m ''
+
 # Add file and commit staged file
 $ git commit -am 'insert commit message'
 
