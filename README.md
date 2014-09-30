@@ -21,6 +21,7 @@
 * [Branching and merging](#branching-and-merging)
 * [Resetting](#resetting)
 * [Git remote](#git-remote)
+* [Git grep](#git-grep)
 * [Checking what you are commiting](#checking-what-you-are-commiting)
 * [Useful Commands](#useful-commands)
 * [Useful Alias](#useful-alias)
@@ -290,6 +291,22 @@ $ git remote -v
 
 # Change the 'origin' remote's URL
 $ git remote set-url origin https://github.com/user/repo.git
+```
+
+##### Git grep 
+
+```sh
+# 'Searches' for parts of strings in a directory
+$ git grep 'something'
+
+# 'Searches' for parts of string in a context (some lines before and some after the grepped term)
+$ git greo -C<number of lines> 'something'
+
+# 'Searches' for parts of string and also shows lines BEFORE the grepped term
+$ git greo -B<number of lines> 'something'
+
+# 'Searches' for parts of string and also shows lines AFTER the grepped term
+$ git greo -A<number of lines> 'something'
 ```
 
 ##### Checking what you are commiting 
