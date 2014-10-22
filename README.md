@@ -323,6 +323,9 @@ $ git diff --stat origin/master
 ##### Useful commands 
 
 ```sh
+# Check if a sha is in production
+$ git tag --contain [sha]
+
 # Number os commits by author
 $ git shortlog -s --author 'Author Name'
 
