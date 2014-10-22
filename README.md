@@ -187,6 +187,12 @@ Creating a local branch
 $ git checkout -b branchname
 ```
 
+Switching between 2 branches (in fact, this would work on terminal as well to switch between 2 directories - $ cd -)
+
+```sh
+$ git checkout -
+```
+
 Pushing local branch to remote
 
 ```sh
@@ -324,7 +330,7 @@ $ git diff --stat origin/master
 
 ```sh
 # Check if a sha is in production
-$ git tag --contain [sha]
+$ git tag --contains [sha]
 
 # Number os commits by author
 $ git shortlog -s --author 'Author Name'
