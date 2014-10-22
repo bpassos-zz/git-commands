@@ -300,13 +300,13 @@ $ git remote set-url origin https://github.com/user/repo.git
 $ git grep 'something'
 
 # 'Searches' for parts of string in a context (some lines before and some after the grepped term)
-$ git greo -C<number of lines> 'something'
+$ git grep -C<number of lines> 'something'
 
 # 'Searches' for parts of string and also shows lines BEFORE the grepped term
-$ git greo -B<number of lines> 'something'
+$ git grep -B<number of lines> 'something'
 
 # 'Searches' for parts of string and also shows lines AFTER the grepped term
-$ git greo -A<number of lines> 'something'
+$ git grep -A<number of lines> 'something'
 ```
 
 ##### Checking what you are commiting 
