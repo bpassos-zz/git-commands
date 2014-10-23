@@ -335,6 +335,9 @@ $ git tag --contains [sha]
 # Number os commits by author
 $ git shortlog -s --author 'Author Name'
 
+# List of authors and commits to a repository sorted alphabetically
+$ git shortlog -s -n
+
 # List of commits showing commit messages and changes
 $ git log -p
 
