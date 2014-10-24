@@ -176,7 +176,7 @@ This will give you an interface on your core editor:
 #  x, exec = run command (the rest of the line) using shell
 ```
 
-##### Branching and merging
+#### Branching and merging
 
 ```sh
 #Creating a local branch
@@ -201,7 +201,7 @@ $ git branch
 $ git branch -r
 ```
 
-##### Fetching and checking out remote branches
+#### Fetching and checking out remote branches
 
 ```sh
 #This will fetch all of the remote branches for you.
@@ -215,7 +215,7 @@ $ git branch -rd origin/branchname
 $ git push origin --delete branchname  or  $ git push origin:branchname
 ```
 
-##### Merging branch to trunk/master
+#### Merging branch to trunk/master
 
 ```sh
 # First checkout trunk/master
@@ -228,13 +228,13 @@ $ git merge branchname
 $ git merge --abort
 ```
 
-##### Tracking existing branch
+#### Tracking existing branch
 
 ```sh
 $ git branch --set-upstream-to=origin/foo foo
 ```
 
-##### Resetting
+#### Resetting
 
 ```sh
 # Mixes your head with a give sha
@@ -257,7 +257,7 @@ $ git reset --hard sha
 $ git reset --hard
 ```
 
-##### Git remote 
+#### Git remote 
 
 ```sh
 # Show where 'origin' is pointing to and also tracked branches
@@ -270,7 +270,7 @@ $ git remote -v
 $ git remote set-url origin https://github.com/user/repo.git
 ```
 
-##### Git grep 
+#### Git grep 
 
 ```sh
 # 'Searches' for parts of strings in a directory
@@ -286,7 +286,7 @@ $ git grep -B<number of lines> 'something'
 $ git grep -A<number of lines> 'something'
 ```
 
-##### Checking what you are commiting 
+#### Checking what you are commiting 
 
 ```sh
 # See all (non-staged) changes done to a local repo 
@@ -297,7 +297,7 @@ $ git diff --stat origin/master
 
 ```
 
-##### Useful commands 
+#### Useful commands 
 
 ```sh
 # Check if a sha is in production
@@ -336,7 +336,7 @@ $ git cat-file sha -p
 
 ```
 
-##### Useful alias
+#### Useful alias
 ###### To add an alias simply open your .gitconfi file on your home directory and include the alias code
 
 ```sh
