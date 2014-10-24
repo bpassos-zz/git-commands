@@ -39,22 +39,21 @@ To view other ways of installing it visit the [Git official site](http://git-scm
 
 Click [here](http://git-scm.com/download/mac) to download and install Git
 
-#### Setting up git
+##### Setting up git
 
 ```sh
 $ git config --global user.name "User Name"
-```
-```sh
+
 $ git config --global user.email "email"
 ```
 
-#### Applying colour to git 
+##### Applying colour to git 
 
 ```sh
 $ git config --global color.ui true
 ```
 
-#### Initializing a repository in an existing directory
+##### Initializing a repository in an existing directory
 
 If you’re starting to track an existing project in Git, you need to go to the project’s directory and type:
 
@@ -146,8 +145,6 @@ $ git stash show
 
 # See diff details of a given stash number
 $ git diff stash@{0}
-
-
 ```
 
 #### Committing files
@@ -179,68 +176,42 @@ This will give you an interface on your core editor:
 #  x, exec = run command (the rest of the line) using shell
 ```
 
-#### Branching and merging
-
-Creating a local branch
+##### Branching and merging
 
 ```sh
+#Creating a local branch
 $ git checkout -b branchname
-```
 
-Switching between 2 branches (in fact, this would work on terminal as well to switch between 2 directories - $ cd -)
-
-```sh
+#Switching between 2 branches (in fact, this would work on terminal as well to switch between 2 directories - $ cd -)
 $ git checkout -
-```
 
-Pushing local branch to remote
-
-```sh
+#Pushing local branch to remote
 $ git push -u origin branchname
-```
 
-Deleting a local branch
-
-```sh
+#Deleting a local branch
 $ git branch -D branchname
-```
 
-Viewing all branches, including local and remote branches
-
-```sh
+#Viewing all branches, including local and remote branches
 $ git branch -a
-```
 
-Viewing local branches
-
-```sh
+#Viewing local branches
 $ git branch
-```
 
-Viewing remote branches
-
-```sh
+#Viewing remote branches
 $ git branch -r
 ```
 
 ##### Fetching and checking out remote branches
 
-This will fetch all of the remote branches for you.
-
 ```sh
+#This will fetch all of the remote branches for you.
 $ git fetch origin
-```
 
-With the remote branches in hand, you now need to check out the branch you are interested in, giving you a local working copy:
-
-```sh
+#With the remote branches in hand, you now need to check out the branch you are interested in, giving you a local working copy:
 $ git checkout -b test origin/test
-```
-Deleting a remote branch
 
-```sh
+#Deleting a remote branch
 $ git branch -rd origin/branchname
-
 $ git push origin --delete branchname  or  $ git push origin:branchname
 ```
 
