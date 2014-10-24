@@ -337,7 +337,7 @@ $ git cat-file sha -p
 ```
 
 #### Useful alias
-###### To add an alias simply open your .gitconfi file on your home directory and include the alias code
+To add an alias simply open your .gitconfig file on your home directory and include the alias code
 
 ```sh
 # shows the log in a more consised way with the graph for branching and merging
