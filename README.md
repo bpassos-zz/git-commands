@@ -309,7 +309,7 @@ $ git diff --stat origin/master
 # Check if a sha is in production
 $ git tag --contains [sha]
 
-# Number os commits by author
+# Number of commits by author
 $ git shortlog -s --author 'Author Name'
 
 # List of authors and commits to a repository sorted alphabetically
