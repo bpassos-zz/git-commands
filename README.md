@@ -188,7 +188,10 @@ $ git checkout -
 #Pushing local branch to remote
 $ git push -u origin branchname
 
-#Deleting a local branch
+#Deleting a local branch - this won't let you delete a branch that hasn't been merged yet
+$ git branch -d branchname
+
+#Deleting a local branch - this WILL delete a branch even if it hasn't been merged yet!
 $ git branch -D branchname
 
 #Viewing all branches, including local and remote branches
