@@ -65,7 +65,7 @@ This creates a new subdirectory named .git that contains all of your necessary r
 To start version-controlling existing files you should start by tracking those files and do an innitial commit. To accomplish that you should start with a few  `$ git add` that specifies the files you want to track followed by a commit.
 
 ```sh
-$ git add *.c
+$ git add <file>
 $ git add README
 $ git commit -m 'Initial project version'
 ```
