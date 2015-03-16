@@ -340,6 +340,9 @@ $ git checkout -- filename
 # Shows more detailed info about a commit
 $ git cat-file sha -p
 
+# Shows log by author and searching for specific term inisde the commit message
+$ git log --grep "term" --author "name"
+
 ```
 
 #### Useful alias
