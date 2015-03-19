@@ -22,6 +22,7 @@
 * [Resetting](#resetting)
 * [Git remote](#git-remote)
 * [Git grep](#git-grep)
+* [Git blame](#git-blame)
 * [Checking what you are commiting](#checking-what-you-are-commiting)
 * [Useful Commands](#useful-commands)
 * [Useful Alias](#useful-alias)
@@ -290,6 +291,16 @@ $ git grep -B<number of lines> 'something'
 
 # 'Searches' for parts of string and also shows lines AFTER the grepped term
 $ git grep -A<number of lines> 'something'
+```
+
+#### Git blame
+
+```sh
+# Show alteration history of a file with the name of the author
+$ git blame [filename]
+
+# Show alteration history of a file with the name of the author && SHA
+$ git blame [filename] -l
 ```
 
 #### Checking what you are commiting 
