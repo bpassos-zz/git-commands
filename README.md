@@ -3,10 +3,10 @@
   width="70"
   align="right"
 />
-#Useful Git Commands
+# Useful Git Commands
 
-##About it
-> Have you recently started using Git? This should give you the base commands you need to perform the most common actions in Git. If you find a command that is not here, or could be explained better, please dont hesitate in * [Contributing](#contributing). Cheers!
+## About it
+> Have you recently started using Git? This should give you the base commands you need to perform the most common actions in Git. If you find a command that is not here, or could be explained better, please don't hesitate in * [Contributing](#contributing). Cheers!
 
 ## Table of contents
 
@@ -23,18 +23,18 @@
 * [Git remote](#git-remote)
 * [Git grep](#git-grep)
 * [Git blame](#git-blame)
-* [Checking what you are commiting](#checking-what-you-are-commiting)
+* [Checking what you are committing](#checking-what-you-are-committing)
 * [Useful Commands](#useful-commands)
 * [Useful Alias](#useful-alias)
 * [Contributing](#contributing)
 
-#### Git 
+#### Git
 
 Git is a distributed version control system, very easy to learn and supper fast!
 
-#### Install Git 
+#### Install Git
 
-There are a few different ways to install git (from source or for Lynux) but the pupose of this page is to focus on git commands, so I am going to assume you are installing git on a Mac.
+There are a few different ways to install git (from source or for Linux) but the purpose of this page is to focus on git commands, so I am going to assume you are installing git on a Mac.
 
 To view other ways of installing it visit the [Git official site](http://git-scm.com/book/en/Getting-Started-Installing-Git)
 
@@ -48,7 +48,7 @@ $ git config --global user.name "User Name"
 $ git config --global user.email "email"
 ```
 
-##### Applying colour to git 
+##### Applying colour to git
 
 ```sh
 $ git config --global color.ui true
@@ -61,9 +61,9 @@ If you’re starting to track an existing project in Git, you need to go to the 
 ```sh
 $ git init
 ```
-This creates a new subdirectory named .git that contains all of your necessary repository files — a Git repository skeleton. At this point, nothing in your project is tracked yet. 
+This creates a new subdirectory named .git that contains all of your necessary repository files — a Git repository skeleton. At this point, nothing in your project is tracked yet.
 
-To start version-controlling existing files you should start by tracking those files and do an innitial commit. To accomplish that you should start with a few  `$ git add` that specifies the files you want to track followed by a commit.
+To start version-controlling existing files you should start by tracking those files and do an initial commit. To accomplish that you should start with a few  `$ git add` that specifies the files you want to track followed by a commit.
 
 ```sh
 $ git add <file>
@@ -94,7 +94,7 @@ nothing added to commit but untracked files present (use "git add" to track)
 
 #### Staging files
 
-After initializing a git repository in the chosen directory, all files will now be tracked. Any changes made to any file will be shown after a $ git status as changes not staged for commit.
+After initializing a git repository in the chosen directory, all files will now be tracked. Any changes made to any file will be shown after a `$ git status` as changes not staged for commit.
 
 To stage changes for commit you need to add the file(s) - or in other words, stage file(s).
 
@@ -105,7 +105,7 @@ $ git add filename
 # Adding all files
 $ git add -A
 
-# Adding a all files changes in a directory
+# Adding all files changes in a directory
 $ git add .
 
 # Choosing what changes to add (this will got through all your changes and you can 'Y' or 'N' the changes)
@@ -114,7 +114,7 @@ $ git add -p
 
 #### Stashing files
 
-Git stash is a very useful command, where git will 'hide' the changes on a dirty directory - but no worries you can reapply them later. The command will save your local changes away and revert the working directory to match the HEAD commit.
+Git stash is a very useful command, where git will 'hide' the changes on a dirty directory - but no worries you can re-apply them later. The command will save your local changes away and revert the working directory to match the HEAD commit.
 
 ```sh
 # Stash local changes
@@ -123,10 +123,10 @@ $ git stash
 # Stash local changes with a custom message
 $ git stash save "this is your custom message"
 
-# Re-aplly the changes you saved in your latest stash
+# Re-apply the changes you saved in your latest stash
 $ git stash apply
 
-# Re-aplly the changes you saved in a given stash number
+# Re-apply the changes you saved in a given stash number
 $ git stash apply stash@{stash_number}
 
 # Drops any stash by its number
@@ -157,7 +157,7 @@ After adding/staging a file, the next step is to commit staged file(s)
 $ git commit -m 'commit message'
 
 # Add file and commit
-$ git commit filename -m ''
+$ git commit filename -m 'commit message'
 
 # Add file and commit staged file
 $ git commit -am 'insert commit message'
@@ -180,41 +180,41 @@ This will give you an interface on your core editor:
 #### Branching and merging
 
 ```sh
-#Creating a local branch
+# Creating a local branch
 $ git checkout -b branchname
 
-#Switching between 2 branches (in fact, this would work on terminal as well to switch between 2 directories - $ cd -)
+# Switching between 2 branches (in fact, this would work on terminal as well to switch between 2 directories - $ cd -)
 $ git checkout -
 
-#Pushing local branch to remote
+# Pushing local branch to remote
 $ git push -u origin branchname
 
-#Deleting a local branch - this won't let you delete a branch that hasn't been merged yet
+# Deleting a local branch - this won't let you delete a branch that hasn't been merged yet
 $ git branch -d branchname
 
-#Deleting a local branch - this WILL delete a branch even if it hasn't been merged yet!
+# Deleting a local branch - this WILL delete a branch even if it hasn't been merged yet!
 $ git branch -D branchname
 
-#Viewing all branches, including local and remote branches
+# Viewing all branches, including local and remote branches
 $ git branch -a
 
-#Viewing local branches
+# Viewing local branches
 $ git branch
 
-#Viewing remote branches
+# Viewing remote branches
 $ git branch -r
 ```
 
 #### Fetching and checking out remote branches
 
 ```sh
-#This will fetch all of the remote branches for you.
+# This will fetch all the remote branches for you.
 $ git fetch origin
 
-#With the remote branches in hand, you now need to check out the branch you are interested in, giving you a local working copy:
+# With the remote branches in hand, you now need to check out the branch you are interested in, giving you a local working copy:
 $ git checkout -b test origin/test
 
-#Deleting a remote branch
+# Deleting a remote branch
 $ git branch -rd origin/branchname
 $ git push origin --delete branchname  or  $ git push origin:branchname
 ```
@@ -261,7 +261,7 @@ $ git reset --hard sha
 $ git reset --hard
 ```
 
-#### Git remote 
+#### Git remote
 
 ```sh
 # Show where 'origin' is pointing to and also tracked branches
@@ -274,7 +274,7 @@ $ git remote -v
 $ git remote set-url origin https://github.com/user/repo.git
 ```
 
-#### Git grep 
+#### Git grep
 
 ```sh
 # 'Searches' for parts of strings in a directory
@@ -303,18 +303,17 @@ $ git blame [filename]
 $ git blame [filename] -l
 ```
 
-#### Checking what you are commiting 
+#### Checking what you are committing
 
 ```sh
-# See all (non-staged) changes done to a local repo 
+# See all (non-staged) changes done to a local repo
 $ git diff
 
-# Check what the changes between the files you've commited and the live repo
+# Check what the changes between the files you've committed and the live repo
 $ git diff --stat origin/master
-
 ```
 
-#### Useful commands 
+#### Useful commands
 
 ```sh
 # Check if a sha is in production
@@ -340,7 +339,7 @@ $ git log --graph
 
 # List of commit comments by author
 $ git shortlog -n --author 'Author Name'
-#This also shows the total number of commits by the author
+# This also shows the total number of commits by the author
 
 # Number of commits by contributors
 $ git shortlog -s -n
@@ -351,18 +350,16 @@ $ git checkout -- filename
 # Shows more detailed info about a commit
 $ git cat-file sha -p
 
-# Shows log by author and searching for specific term inisde the commit message
+# Shows log by author and searching for specific term inside the commit message
 $ git log --grep "term" --author "name"
-
 ```
 
 #### Useful alias
 To add an alias simply open your .gitconfig file on your home directory and include the alias code
 
 ```sh
-# shows the log in a more consised way with the graph for branching and merging
+# Shows the log in a more consisted way with the graph for branching and merging
 lg = log --color --graph --pretty=format:'%Cred%h%Creset -%C(yellow)%d%Creset %s %Cgreen(%cr) %C(bold blue)<%an>%Creset' --abbrev-commit
-
 ```
 
 ### Contributing
@@ -372,8 +369,3 @@ lg = log --color --graph --pretty=format:'%Cred%h%Creset -%C(yellow)%d%Creset %s
 3. Commit your changes: `git commit -m 'Add some feature'`
 4. Push to the branch: `git push origin my-new-feature`
 5. Submit a pull request - cheers!
-
-
-
-
-
