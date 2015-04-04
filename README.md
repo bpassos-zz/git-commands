@@ -211,8 +211,11 @@ $ git branch -r
 #This will fetch all of the remote branches for you.
 $ git fetch origin
 
-#With the remote branches in hand, you now need to check out the branch you are interested in, giving you a local working copy:
-$ git checkout -b test origin/test
+#With the remote branches in hand, you now need to check out the branch you are interested in, giving you a local working copy with a different branchname:
+$ git checkout -b test_b origin/test
+
+#Creating and checking out a local branch with the same name as the remote branchname
+$ git checkout -t origin/test
 
 #Deleting a remote branch
 $ git branch -rd origin/branchname
