@@ -195,6 +195,9 @@ $ git branch -d branchname
 # Deleting a local branch - this WILL delete a branch even if it hasn't been merged yet!
 $ git branch -D branchname
 
+# Remove any remote refs you have locally that have been removed from your remote (you can substitute <origin> to any remote branch)
+$ git remote prune origin
+
 # Viewing all branches, including local and remote branches
 $ git branch -a
 
