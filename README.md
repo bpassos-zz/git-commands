@@ -198,6 +198,12 @@ $ git branch -D branchname
 # Viewing all branches, including local and remote branches
 $ git branch -a
 
+# Viewing all branches that have been merged into your current branch, including local and remote
+$ git branch -a --merged
+
+# Viewing all branches that haven't been merged into your current branch, including local and remote
+$ git branch -a --no-merged
+
 # Viewing local branches
 $ git branch
 
