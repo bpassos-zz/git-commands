@@ -23,6 +23,7 @@
 * [Git remote](#git-remote)
 * [Git grep](#git-grep)
 * [Git blame](#git-blame)
+* [Git log](#git-log)
 * [Checking what you are committing](#checking-what-you-are-committing)
 * [Useful Commands](#useful-commands)
 * [Useful Alias](#useful-alias)
@@ -325,6 +326,44 @@ $ git diff --cached
 $ git diff --stat origin/master
 ```
 
+#### Git log
+
+```sh
+# Show a list of all commits in a repository. This command shows everything about a commit, such as commit ID, author, date and commit message.
+$ git log
+
+# List of commits showing commit messages and changes
+$ git log -p
+
+# List of commits with the particular expression you are looking for
+$ git log -S 'something'
+
+# List of commits by author
+$ git log --author 'Author Name'
+
+# Show a list of commits in a repository in a more summarised way. This shows a shorter version of the commit ID and the commit message.
+$ git log --oneline
+
+# Show a list of commits in a repository since yesterday
+$ git log --since=yesterday
+
+# Shows log by author and searching for specific term inside the commit message
+$ git log --grep "term" --author "name"
+```
+
+#### Checking what you are committing
+
+```sh
+# See all (non-staged) changes done to a local repo
+$ git diff
+
+# See all (staged) changes done to a local repo 
+$ git diff --cached
+
+# Check what the changes between the files you've committed and the live repo
+$ git diff --stat origin/master
+```
+
 #### Useful commands
 
 ```sh
@@ -336,18 +375,6 @@ $ git shortlog -s --author 'Author Name'
 
 # List of authors and commits to a repository sorted alphabetically
 $ git shortlog -s -n
-
-# List of commits showing commit messages and changes
-$ git log -p
-
-# List of commits with the particular expression you are looking for
-$ git log -S 'something'
-
-# List of commits by author
-$ git log --author 'Author Name'
-
-# Shows a list of commits with a graph illustrating the history
-$ git log --graph
 
 # List of commit comments by author
 $ git shortlog -n --author 'Author Name'
@@ -361,9 +388,6 @@ $ git checkout -- filename
 
 # Shows more detailed info about a commit
 $ git cat-file sha -p
-
-# Shows log by author and searching for specific term inside the commit message
-$ git log --grep "term" --author "name"
 ```
 
 #### Useful alias
