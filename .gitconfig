@@ -1,0 +1,203 @@
+[core]
+  editor = vim
+ 
+ 
+[user]
+#  name = 
+#  email = 
+ 
+ 
+[alias]
+ 
+  # List all aliases
+  alias = !git config --list | grep 'alias\\.' | sed 's/alias\\.\\([^=]*\\)=\\(.*\\)/\\1/' | sort;
+  aliases = !git config --list | grep 'alias\\.' | sed 's/alias\\.\\([^=]*\\)=\\(.*\\)/\\1\\\t\\2/' | sort;
+  
+  # Where it is?
+  url = remote -v;
+  
+ 
+ 
+  ##########
+  # Logs
+  ##########
+ 
+  # Who contributed and how much
+  who = shortlog -sne; 
+ 
+  # Show last commit
+  last = log -1 HEAD;
+ 
+  # Last tag
+  lasttag = describe --tags --abbrev=0;
+ 
+  # View the SHA, description, and history graph of the latest 20 commits
+  l = log --graph --abbrev-commit --pretty=oneline -n 20;
+ 
+  # View the SHA, description, date, author and history graph
+  # Example:
+  #	* 66a2a64 - comment (20 hours ago) <USER1>
+  #	*   6a7206f - Merge branch 'develop' into very-cool-feature (21 hours ago) <USER2>
+  #	|\  
+  #	| * 1748c5f - comment (21 hours ago) <USER2>
+  #	| * e3a42a1 - comment (21 hours ago) <USER2>
+  #	* 2667f01 - comment (2 days ago) <USER3>
+  #	* 7f5722d - comment (2 days ago) <USER1>
+  # 
+  history = log --graph --pretty=format:'%Cred%h%Creset -%C(yellow)%d%Creset %s %Cgreen(%cr) %C(bold blue)<%an>%Creset'; 
+ 
+  # View the SHA, description, date, and history graph of my commits
+  # Example:
+  #	* 66a2a64 - comment (20 hours ago) <USER1>
+  #	*   6a7206f - Merge branch 'develop' into very-cool-feature (21 hours ago) <USER2>
+  #	|\  
+  #	| * 1748c5f - comment (21 hours ago) <USER2>
+  #	| * e3a42a1 - comment (21 hours ago) <USER2>
+  #	* 2667f01 - comment (2 days ago) <USER3>
+  #	* 7f5722d - comment (2 days ago) <USER1>
+  # 
+  mylog =   log --graph --pretty=format:'%Cred%h%Creset -%C(yellow)%d%Creset %s %Cgreen(%cr) %C(bold blue)<%an>%Creset' --author="$(git config USER.name)";
+ 
+ 
+ 
+  ##########
+  # Status
+  ##########
+ 
+  # View the current working tree status using the short format
+  s = status -s;
+ 
+  # Diff
+  d = diff --patch-with-stat;
+ 
+ 
+ 
+ 
+  ##########
+  # Commits
+  ##########
+ 
+  # lazy alias
+  c = commit;  
+ 
+  # Commit all changes
+  ca = !git add . && git add -u && git commit -a;
+  
+  # add and commit with message, dont need quotation marks
+  # Example:
+  # git cam message without quotes
+  ac = "!f() { git add . && git commit -m \"$(echo $@)\"; }; f";
+ 
+  # mark file as unchanged to prevent commits
+  assume = git update-index --assume-unchanged;
+  assumeall = "!git st -s | awk {'print $2'} | xargs git assume"
+  
+  # remove mark file as unchanged
+  unassume = git update-index --no-assume-unchanged;
+  unassumeall = "!git assumed | xargs git update-index --no-assume-unchanged"
+ 
+ 
+ 
+  ##########
+  # Pull, Push
+  ##########
+ 
+  # pull this branch 
+  get = !git pull origin $(git rev-parse --abbrev-ref HEAD);
+ 
+  # push this branch
+  post = !git push origin $(git rev-parse --abbrev-ref HEAD);
+ 
+  # pull and push this branch
+  update = "!f() { BRANCH=$(git rev-parse --abbrev-ref HEAD); git s && git pull origin ${BRANCH} && git push origin ${BRANCH}; }; f";
+ 
+ 
+ 
+ 
+  ##########
+  # Deploys
+  ##########
+ 
+  # update develop
+  dev-deploy = !git pull origin develop && git push origin develop;
+ 
+  # update this branch and send to another branch, and return to this branch
+  mergeto = "!f() { BRANCH=$(git rev-parse --abbrev-ref HEAD); git pull origin ${BRANCH} && git push origin ${BRANCH} && git checkout $1 && git pull origin $1 && git merge ${BRANCH} && git push origin $1 && git checkout ${BRANCH}; }; f";
+ 
+  # update this branch and send to develop and another branch (release), and return to this branch
+  #
+  #                 another
+  # branch develop  branch
+  #      |
+  #       \
+  #           |
+  #            \        
+  #                  |
+  branch-deploy = "!f() { BRANCH=$(git rev-parse --abbrev-ref HEAD); git pull origin ${BRANCH} && git push origin ${BRANCH} && git checkout develop && git pull origin develop && git merge ${BRANCH} && git push origin develop && git checkout $1 && git pull origin $1 && git merge develop && git push origin $1 && git checkout ${BRANCH}; }; f";
+ 
+ 
+ 
+ 
+  ##########
+  # Branchs
+  ##########
+ 
+  # lazy alias
+  b = branch;
+  co = checkout;
+ 
+  # create branch local and remote
+  create = "!f() { git checkout -B $1 && git push origin $1; }; f";
+ 
+  # deleta branch
+  rmbranch = update-ref -d HEAD;
+ 
+  # update branchs
+  branchs = !git fetch --all && git fetch -p && git branch -a;
+ 
+  # change to another branch and update
+  go = "!f() { git checkout $1 && git pull origin $1; }; f";
+ 
+  # remove branchs that dont exist on remote (you should be on one existing branch)
+  clearbranchs = !git branch -a | grep -v 'origin' | xargs git branch -D;
+ 
+ 
+ 
+ 
+  ##########
+  # Undo
+  ##########
+ 
+  # Undo a `git push`
+  undopush = push -f origin HEAD^:master;
+ 
+  # Undo merge
+  undomerge = reset --hard HEAD@{1};
+ 
+  # Undo changes not commited
+  undo = reset --hard;
+ 
+  # Undo last commit and remove from stage
+  # Example
+  # git unstage file1 file2 ...
+  unstage = reset HEAD -- #file;
+ 
+ 
+ 
+ 
+  ##########
+  # Merge
+  ##########
+  
+  # merge and use mine
+  ours = "!f() { git checkout --ours $@ && git add $@; }; f";
+ 
+  # merge and use theirs
+  theirs = "!f() { git checkout --theirs $@ && git add $@; }; f";
+ 
+ 
+ 
+  #===========================================
+  # I really dont recommend powerful commands with  one letter only
+  #===========================================
+  #  a = add .;
