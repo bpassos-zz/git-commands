@@ -313,19 +313,6 @@ $ git blame [filename]
 $ git blame [filename] -l
 ```
 
-#### Checking what you are committing
-
-```sh
-# See all (non-staged) changes done to a local repo
-$ git diff
-
-# See all (staged) changes done to a local repo 
-$ git diff --cached
-
-# Check what the changes between the files you've committed and the live repo
-$ git diff --stat origin/master
-```
-
 #### Git log
 
 ```sh
