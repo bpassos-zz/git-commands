@@ -71,6 +71,7 @@ Para comecar o versionamento nos arquivos existentes, você deve começar por ra
 $ git add <file>
 $ git add README
 $ git commit -m 'Versão inicial do projeto'
+``` 
 
 
 #### Checkando o status dos arquivos
