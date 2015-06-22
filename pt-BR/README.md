@@ -14,7 +14,7 @@ Começou a usar Git recentemente? Esse documento deve lhe dar os principais coma
 * [Configurando o Git](#configurando-o-git)
 * [Aplicando cores ao Git](#aplicando-cores-ao-git)
 * [Inicializando um repositorio em diretorio existente](#inicializando-um-repositorio-em-diretorio-existente)
-* [Checkando o status dos arquivos](#checkando-o-status-dos-arquivos)
+* [Checkando o status dos arquivos](#Checkando-o-status-dos-arquivos)
 * [Staging Arquivos](#staging-arquivos)
 * [Stashing Arquivos](#stashing-arquivos)
 * [Commitando Arquivos](#committing-files)
