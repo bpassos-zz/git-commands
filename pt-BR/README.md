@@ -10,13 +10,13 @@ Começou a usar Git recentemente? Esse documento deve lhe dar os principais coma
 
 ## Sumário
 
-* [Instalando o Git](#install-git)
-* [Configurando o Git](#setting-up-git)
-* [Aplicando cores ao Git](#applying-colour-to-git)
-* [Inicializando um repositorio em diretorio existente](#initializing-a-repository-in-an-existing-directory)
-* [Checkando o status dos arquivos](#checking-the-status-of-your-files)
-* [Staging Arquivos](#staging-files)
-* [Stashing Arquivos](#stashing-files)
+* [Instalando o Git](#instalando-o-git)
+* [Configurando o Git](#configurando-o-git)
+* [Aplicando cores ao Git](#aplicando-cores-ao-git)
+* [Inicializando um repositorio em diretorio existente](#inicializando-um-repositorio-em-diretorio-existente)
+* [Checkando o status dos arquivos](#checkando-o-status-dos-arquivos)
+* [Staging Arquivos](#staging-arquivos)
+* [Stashing Arquivos](#stashing-arquivos)
 * [Commitando Arquivos](#committing-files)
 * [Branch e Merge](#branching-and-merging)
 * [Reset](#resetting)
