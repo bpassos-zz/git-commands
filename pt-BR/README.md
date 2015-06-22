@@ -3,7 +3,7 @@
   width="70"
   align="right"
 />
-# Useful Git Commands
+# Git Comandos Uteis
 
 ## Sobre 
 Começou a usar Git recentemente? Esse documento deve lhe dar os principais comandos para comecar a usar o Git de uma forma básica  e simples. Caso não encontre algum comando que o julgue importante para o documento, não hesite, basta apenas [contribuir](#contribuir).  
@@ -96,6 +96,62 @@ $ git status
 nothing added to commit but untracked files present (use "git add" to track)
 ```
 
+#### Staging Arquivos 
+
+Depois de inicializar um repositório git no diretório escolhido, todos os arquivos serão agora rastreados.Quaisquer alterações feitas a qualquer arquivo será exibido após o comando `$ git status`, sendo esses or arquivos que ainda nao estao commitados.
+
+To stage changes for commit you need to add the file(s) - or in other words, stage file(s).
+ 
+Para adicionar os arquivos na Stage Area, basta adicionar eles? 
+
+```sh
+# Adicionando arquivo pelo nome
+$ git add filename
+
+# Adicionando todos os arquivos modificados
+$ git add -A
+
+# Adicionando todos os arquivos e diretorios modificados
+$ git add .
+
+# Seleciona o que muda para adicionar(essa vontade tem por todas as alterações e você pode 'Y' ou 'N' as mudanças)
+$ git add -p
+```
+
+#### Stashing Arquivos
+Git Stash é um comando muito útil, onde git vai "esconder" as mudanças em um diretório sujo - mas não se preocupe você pode re-aplicá-las mais tarde. O comando vai salvar suas alterações locais longe e reverter o diretório de trabalho para coincidir com o commit HEAD.
+
+```sh
+# Stash alteracoes locais
+$ git stash
+
+# Stash alteracoes locais com uma mensagem
+$ git stash save "this is your custom message"
+
+# Re-aplicar as alteracoes que foram salvar em um stash anterior
+$ git stash apply
+
+# Re-aplicar as alterações que você salvou em um determinado número do stash
+$ git stash apply stash@{stash_number}
+
+# Apagar qualquer stash pelo seu numero
+$ git stash drop stash@{0}
+
+# Aplicar o stash e logo em seguida retirá-lo do seu stack
+$ git stash pop
+
+# 'Release' um estoque especial da sua lista de stash`s
+$ git stash pop stash@{stash_number}
+
+# Listar todos os stash`s
+$ git stash list
+
+# Mostrar as últimas mudanças nos stash`s
+$ git stash show
+
+# Veja detalhes [diff] de um determinado número de stash
+$ git diff stash@{0}
+```
 
 
 
