@@ -17,7 +17,7 @@ Começou a usar Git recentemente? Esse documento deve lhe dar os principais coma
 * [Checkando o status dos arquivos](#Checkando-o-status-dos-arquivos)
 * [Staging Arquivos](#staging-arquivos)
 * [Stashing Arquivos](#stashing-arquivos)
-* [Commitando Arquivos](#committing-files)
+* [Commitando Arquivos](#commitando-arquivos)
 * [Branch e Merge](#branching-and-merging)
 * [Reset](#resetting)
 * [Git remote](#git-remote)
@@ -154,6 +154,34 @@ $ git stash show
 $ git diff stash@{0}
 ```
 
+#### Commitando Arquivos
+
+Depois de adicionar/staging os arquivos, o próximo passo é commitar os arquivos que estão na Stagin:
+
+```sh
+# Commitar arquivos da stage
+$ git commit -m 'commit message'
+
+# Adicionar arquivo e commitar
+$ git commit filename -m 'commit message'
+
+# Adicionar arquivos na stage e comitar
+$ git commit -am 'insert commit message'
+
+# Alterar um Commit
+$ git commit --amend 'mensagem do novo commit' ou nenhuma mensagem para manter a mensagem anterior
+
+# Squashing commits juntos
+$ git rebase -i
+Isto lhe dará uma interface em seu editor de núcleo:
+# Comandos:
+#  p, pick = use commit
+#  r, reword = use commit, mas editar a mensagem do commit 
+#  e, edit = use commit, mas parar para alterar
+#  s, squash = use commit, mas se juntar ao commit anterior
+#  f, fixup = like "squash", mas descartar esta mensagem de log no commit
+#  x, exec = usar comando (o resto da linha) usando shell
+```
 
 
 
