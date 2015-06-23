@@ -319,3 +319,28 @@ $ git blame [nomedoarquivo]
 # Mostra o histórico de alterações do arquivo com o nome do autor e SHA
 $ git blame [nomedoarquivo] -l
 ```
+
+#### Git log
+
+```sh
+#Mostrar uma lista de todos os commits em um repositório. Este comando mostra tudo sobre um commit, como commit ID, autor, data e mensagem do commit.
+$ git log
+
+# Lista os commits que mostram mensagens de commit e mudanças
+$ git log -p
+
+# Lista os commit's com uma expressão em comum
+$ git log -S 'algumacoisa'
+
+# Lista os commit's de um autor
+$ git log --author 'Nome do Autor'
+
+# Mostrar uma lista de commits em um repositório de uma forma mais resumida. Isso mostra uma versão mais curta do commit ID e a mensagem de commit.
+$ git log --oneline
+
+# Mostrar uma lista de commits em um repositório desde o dia anteirior
+$ git log --since=yesterday
+
+# Mostra o log pelo autor e em busca de termo específico dentro da mensagem de commit
+$ git log --grep "term" --author "name"
+```
