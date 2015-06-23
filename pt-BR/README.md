@@ -25,9 +25,9 @@ Começou a usar Git recentemente? Esse documento deve lhe dar os principais coma
 * [Git blame](#git-blame)
 * [Git log](#git-log)
 * [Checkando o que estou commitando](#checkando-o-que-estou-commitando)
-* [Comandos úteis](#useful-commands)
-* [Alias úteis](#useful-alias)
-* [Contribuição](#contributing)
+* [Comandos úteis](#comandos-úteis)
+* [Alias úteis](#alias-úteis)
+* [Contribuição](#contribuição)
 
 #### Git
 
@@ -383,3 +383,19 @@ $ git checkout -- nomedoarquivo
 # Mostra informações mais detalhadas sobre um commit
 $ git cat-file sha -p
 ```
+
+#### Alias úteis
+Para adicionar um alias basta abrir o arquivo .gitconfig em seu diretório home e incluir o código de alias
+
+```sh
+# Mostra o log de uma forma mais condizente com o gráfico de branch e merge
+lg = log --color --graph --pretty=format:'%Cred%h%Creset -%C(yellow)%d%Creset %s %Cgreen(%cr) %C(bold blue)<%an>%Creset' --abbrev-commit
+```
+
+### Contribuição
+
+1. Dê um Fork no repositório!
+2. Crie seu novo branch: `git checkout -b meu-novo-branch`
+3. Commite suas alterações: `git commit -m 'Add some feature'`
+4. Push to the branch: `git push origin meu-novo-branch`
+5. Submeta um pull request - Ótimo!
