@@ -309,3 +309,13 @@ $ git grep -B<número de linhas> 'algumacoisa'
 # 'Buscas' por partes de uma string e também mostra linhas DEPOIS do termo grepped
 $ git grep -A<núumero de linhas> 'algumacoisa'
 ```
+
+#### Git blame
+
+```sh
+# Mostra o histórico de alterações do arquivo com o nome do autor
+$ git blame [nomedoarquivo]
+
+# Mostra o histórico de alterações do arquivo com o nome do autor e SHA
+$ git blame [nomedoarquivo] -l
+```
