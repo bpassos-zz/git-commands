@@ -24,7 +24,7 @@ Começou a usar Git recentemente? Esse documento deve lhe dar os principais coma
 * [Git grep](#git-grep)
 * [Git blame](#git-blame)
 * [Git log](#git-log)
-* [Checkando meus commits](#checking-what-you-are-committing)
+* [Checkando o que estou commitando](#checkando-o-que-estou-commitando)
 * [Comandos úteis](#useful-commands)
 * [Alias úteis](#useful-alias)
 * [Contribuição](#contributing)
@@ -343,4 +343,17 @@ $ git log --since=yesterday
 
 # Mostra o log pelo autor e em busca de termo específico dentro da mensagem de commit
 $ git log --grep "term" --author "name"
+```
+
+#### Checkando o que estou commitando
+
+```sh
+# Veja todos (não-staged) mudanças feitas a um repo local
+$ git diff
+
+# Veja todos (staged) mudanças feitas a um repo local
+$ git diff --cached
+
+# Confira o que as mudanças entre os arquivos que você cometidos e a repo ao vivo
+$ git diff --stat origin/master
 ```
