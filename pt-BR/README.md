@@ -14,7 +14,7 @@
 * [Configurando o Git](#configurando-o-git)
 * [Aplicando cores ao Git](#aplicando-cores-ao-git)
 * [Inicializando um repositorio em diretorio existente](#inicializando-um-repositorio-em-diretorio-existente)
-* [Checkando o status dos arquivos](#Checkando-o-status-dos-arquivos)
+* [Checkando o status dos arquivos](#checkando-o-status-dos-arquivos)
 * [Staging Arquivos](#staging-arquivos)
 * [Stashing Arquivos](#stashing-arquivos)
 * [Commitando Arquivos](#commitando-arquivos)
@@ -27,15 +27,15 @@
 * [Checkando o que estou commitando](#checkando-o-que-estou-commitando)
 * [Comandos úteis](#comandos-úteis)
 * [Alias úteis](#alias-úteis)
-* [Contribuição](#contribuição)
+* [Contribuição](#contribuir)
 
 #### Git
 
-Git e um sistema de controle de versao distribuido, muito facil de aprender e super rapido!
+Git e um sistema de controle de versão distribuído, muito fácil de aprender e super rápido!
 
 #### Instalando o Git
 
-Existem algumas maneiras diferentes de instalar git (da fonte ou pelo Linux) mas o objectivo desta página é se concentrar em comandos do git, por isso estou indo supor que você está instalando o git em um Mac.
+Existem algumas maneiras diferentes de instalar git (da fonte ou pelo Linux) mas o objetivo desta página é se concentrar em comandos do git, por isso estou indo supor que você está instalando o git em um Mac.
 
 Para ver outras maneiras de instalar o Git, visite a [Git official site](http://git-scm.com/book/en/v2/Getting-Started-About-Version-Control)
 
@@ -85,7 +85,7 @@ $ git status
 nothing to commit (working directory clean)
 ```
 
-Se voce adicionar um novo arquivo ao seu projeto, e o mesmo nao existia antes, quando vice executar o comando `$ git status` você deve ver seu arquivos que nao estao adicionados como este:
+Se você adicionar um novo arquivo ao seu projeto, e o mesmo não existia antes, quando você executar o comando `$ git status` você deve ver seu arquivos que não estão adicionados como este:
 
 ```sh
 $ git status
@@ -94,16 +94,18 @@ $ git status
 #   (use "git add <file>..." to include in what will be committed)
 #
 #   README
-nothing added to commit but untracked files present (use "git add" to track)
+# nothing added to commit but untracked files present (use "git add" to track)
 ```
 
 #### Staging Arquivos 
 
-Depois de inicializar um repositório git no diretório escolhido, todos os arquivos serão agora rastreados.Quaisquer alterações feitas a qualquer arquivo será exibido após o comando `$ git status`, sendo esses or arquivos que ainda nao estao commitados.
+Depois de inicializar um repositório git no diretório escolhido, todos os arquivos serão agora rastreados. Quaisquer alterações feitas a qualquer arquivo será exibido após o comando `$ git status`, sendo esses or arquivos que ainda não estão commitados.
 
 To stage changes for commit you need to add the file(s) - or in other words, stage file(s).
+
+Para 'Stagear' mudanças para commit você precisa adicionar o(s) arquivo(s) - ou em outras palavras, arquivo(s) estágio.
  
-Para adicionar os arquivos na Stage Area, basta adicionar eles? 
+Para adicionar os arquivos na Stage Area, basta adicionar eles.
 
 ```sh
 # Adicionando arquivo pelo nome
@@ -156,7 +158,7 @@ $ git diff stash@{0}
 
 #### Commitando Arquivos
 
-Depois de adicionar/staging os arquivos, o próximo passo é commitar os arquivos que estão na Stagin:
+Depois de adicionar/staging os arquivos, o próximo passo é commitar os arquivos que estão na Stage:
 
 ```sh
 # Commitar arquivos da stage
@@ -261,13 +263,13 @@ $ git branch --set-upstream-to=origin/foo foo
 $ git reset --mixed [sha]
 
 # Upstream master
-$ git reset HEAD origin/master -- filename
+$ git reset HEAD origin/master -- nomedoarquivo
 
 # A versão mais recente do commit 
-$ git reset HEAD -- filename
+$ git reset HEAD -- nomedoarquivo
 
 # A versão mais recente antes do commit
-$ git reset HEAD^ -- filename
+$ git reset HEAD^ -- nomedoarquivo
 
 # Mover a HEAD para um commit específico
 $ git reset --hard sha
@@ -392,7 +394,7 @@ Para adicionar um alias basta abrir o arquivo .gitconfig em seu diretório home 
 lg = log --color --graph --pretty=format:'%Cred%h%Creset -%C(yellow)%d%Creset %s %Cgreen(%cr) %C(bold blue)<%an>%Creset' --abbrev-commit
 ```
 
-### Contribuição
+### Contribuir
 
 1. Dê um Fork no repositório!
 2. Crie seu novo branch: `git checkout -b meu-novo-branch`
