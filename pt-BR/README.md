@@ -357,3 +357,29 @@ $ git diff --cached
 # Confira o que as mudanças entre os arquivos que você cometidos e a repo ao vivo
 $ git diff --stat origin/master
 ```
+
+#### Comandos úteis
+
+```sh
+# Verifique se um sha está em produção
+$ git tag --contains [sha]
+
+# Número de commit's por autor
+$ git shortlog -s --author 'Nome do Autor'
+
+# Lista de autores e commits para um repositorio em ordem alfabética
+$ git shortlog -s -n
+
+# Lista de commits comentados por autor
+$ git shortlog -n --author 'Nome do Autor'
+# também mostra o número total de commits pelo autor
+
+# Numero de commit's por contribuidores
+$ git shortlog -s -n
+
+# Desfazer alterações feitas em um arquivo
+$ git checkout -- nomedoarquivo
+
+# Mostra informações mais detalhadas sobre um commit
+$ git cat-file sha -p
+```
