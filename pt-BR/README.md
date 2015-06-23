@@ -290,3 +290,22 @@ $ git remote -v
 # Alterar a URL do branch remoto "origin"
 $ git remote set-url origin https://github.com/user/repo.git
 ```
+
+#### Git grep
+
+```sh
+# 'Buscas' por partes de uma string em um diretorio
+$ git grep 'algumacoisa'
+
+# 'Buscas' por partes de uma string em um diretorio e as cópias -n fora os números de linha onde git encontrou
+$ git grep -n 'alguma coisa'
+
+# 'Buscas' por partes de uma string em um contexto (algumas linhas antes e após o termo algumas grepped)
+$ git grep -C<número de linhas> 'algumacoisa'
+
+# 'Buscas' por partes de uma string e também mostra linhas ANTES do termo grepped
+$ git grep -B<número de linhas> 'algumacoisa'
+
+# 'Buscas' por partes de uma string e também mostra linhas DEPOIS do termo grepped
+$ git grep -A<núumero de linhas> 'algumacoisa'
+```
