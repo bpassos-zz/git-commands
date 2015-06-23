@@ -18,7 +18,7 @@ Começou a usar Git recentemente? Esse documento deve lhe dar os principais coma
 * [Staging Arquivos](#staging-arquivos)
 * [Stashing Arquivos](#stashing-arquivos)
 * [Commitando Arquivos](#commitando-arquivos)
-* [Branch e Merge](#branching-and-merging)
+* [Branch e Merge](#branch-e-merge)
 * [Reset](#resetting)
 * [Git remote](#git-remote)
 * [Git grep](#git-grep)
@@ -160,13 +160,13 @@ Depois de adicionar/staging os arquivos, o próximo passo é commitar os arquivo
 
 ```sh
 # Commitar arquivos da stage
-$ git commit -m 'commit message'
+$ git commit -m 'mensagem do commit'
 
 # Adicionar arquivo e commitar
-$ git commit filename -m 'commit message'
+$ git commit nomedoarquivo -m 'mesagem do commit'
 
 # Adicionar arquivos na stage e comitar
-$ git commit -am 'insert commit message'
+$ git commit -am 'mensagem do commit'
 
 # Alterar um Commit
 $ git commit --amend 'mensagem do novo commit' ou nenhuma mensagem para manter a mensagem anterior
@@ -179,9 +179,77 @@ Isto lhe dará uma interface em seu editor de núcleo:
 #  r, reword = use commit, mas editar a mensagem do commit 
 #  e, edit = use commit, mas parar para alterar
 #  s, squash = use commit, mas se juntar ao commit anterior
-#  f, fixup = like "squash", mas descartar esta mensagem de log no commit
+#  f, fixup = como o "squash", mas descartar esta mensagem de log no commit
 #  x, exec = usar comando (o resto da linha) usando shell
 ```
 
+#### Branch e Merge
 
+```sh
+# Criando um branch local 
+$ git checkout -b nomedobranch
+
+# Alternar entre dois branchs (na verdade, isso iria funcionar no terminal, bem como para alternar entre dois diretórios - $ cd -)
+$ git checkout nomedobranch
+
+# Mandando um branch local para um branch remoto
+$ git push -u origin nomedobranch
+
+# Deletando um branch local - este não vai deixar você apagar um ramo que ainda não foi mesclado
+$ git branch -d nomedobranch
+
+# Deletando um branch local - Isto irá apagar uma branch, mesmo que não tenha sido dados um merge
+$ git branch -D nomedobranch
+
+# Remova qualquer refs remote que você tem localmente que foram removidos de seu controle remoto (você pode substituir <origem> para qualquer ramo remoto)
+$ git remote prune origin
+
+# Ver todos os branch's, incluindo os locias e branch's remotos
+$ git branch -a
+
+# Vendo todos os branch's que foram incorporadas em seu branch atual, incluindo local e remoto
+$ git branch -a --merged
+
+# Ver todos os branch's que ainda nao foram criados merge, incluindo locais e remotos
+$ git branch -a --no-merged
+
+# Ver o branch atual
+$ git branch
+
+# Ver branch's remotos
+$ git branch -r
+```
+
+#### Buscar e verificar branch's remotos
+
+```sh
+# Este irá buscar todas as filiais remotas para você.
+$ git fetch origin
+
+# Com os branch's remotos na mão, agora você precisa para verificar o branch que você está interessado, dando-lhe uma cópia de trabalho local:
+$ git checkout -b test origin/test
+
+# Deletando um branch remoto
+$ git branch -rd origin/nomedobranch
+$ git push origin --delete nomedobranch  or  $ git push origin:nomedobranch
+```
+
+#### Mesclando branch ao master
+
+```sh
+# Primeiro check o branch trunk/master
+$ git checkout trunk/master
+
+# Agora merge o novo branch para trunk/master
+$ git merge nomedobranch
+
+# Para cancelar o merge
+$ git merge --abort
+```
+
+#### Acompanhando branch existente
+
+```sh
+$ git branch --set-upstream-to=origin/foo foo
+```
 
