@@ -19,7 +19,7 @@ Começou a usar Git recentemente? Esse documento deve lhe dar os principais coma
 * [Stashing Arquivos](#stashing-arquivos)
 * [Commitando Arquivos](#commitando-arquivos)
 * [Branch e Merge](#branch-e-merge)
-* [Reset](#resetting)
+* [Redefinindo](#redefinindo)
 * [Git remote](#git-remote)
 * [Git grep](#git-grep)
 * [Git blame](#git-blame)
@@ -253,3 +253,25 @@ $ git merge --abort
 $ git branch --set-upstream-to=origin/foo foo
 ```
 
+#### Redefinindo
+
+```sh
+# Mistura a HEAD com um sha
+# Isso permite que você faça coisas como dividir um commit
+$ git reset --mixed [sha]
+
+# Upstream master
+$ git reset HEAD origin/master -- filename
+
+# A versão mais recente do commit 
+$ git reset HEAD -- filename
+
+# A versão mais recente antes do commit
+$ git reset HEAD^ -- filename
+
+# Mover a HEAD para um commit específico
+$ git reset --hard sha
+
+#Redefinir a área de teste e o diretório de trabalho para coincidir com a mais recente confirmação. Além das mudanças unstaging, a flag --hard diz Git para substituir todas as alterações no diretório de trabalho também.
+$ git reset --hard
+```
