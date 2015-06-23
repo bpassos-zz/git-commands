@@ -275,3 +275,18 @@ $ git reset --hard sha
 #Redefinir a área de teste e o diretório de trabalho para coincidir com a mais recente confirmação. Além das mudanças unstaging, a flag --hard diz Git para substituir todas as alterações no diretório de trabalho também.
 $ git reset --hard
 ```
+
+
+#### Git remote
+
+```sh
+# Mostrar onde "origin" está apontando para e também branch de rastos
+$ git remote show origin
+
+# Show where 'origin' is pointing to
+Mostrar onde está apontando para "origin"
+$ git remote -v
+
+# Alterar a URL do branch remoto "origin"
+$ git remote set-url origin https://github.com/user/repo.git
+```
