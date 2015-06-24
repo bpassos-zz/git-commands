@@ -5,6 +5,8 @@
 />
 # Git Comandos Uteis
 
+Voltar para versão em [Inglês](/README.md)
+
 ## Sobre 
 > Começou a usar Git recentemente? Esse documento deve lhe dar os principais comandos para comecar a usar o Git de uma forma básica  e simples. Caso não encontre algum comando que o julgue importante para o documento, não hesite, basta apenas [contribuir](#contribuir).  
 
