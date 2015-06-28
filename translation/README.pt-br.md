@@ -102,9 +102,6 @@ $ git status
 
 Depois de inicializar um repositório git no diretório escolhido, todos os arquivos serão agora rastreados. Quaisquer alterações feitas a qualquer arquivo será exibido após o comando `$ git status`, sendo esses or arquivos que ainda não estão commitados.
 
-
-Para stagear alteracoes para inserí-la em um commit, é necessário adicionar os arquivos. Em outras palavras, stagear arquivos.
-
 Para 'Stagear' mudanças para commit você precisa adicionar o(s) arquivo(s) - ou em outras palavras, arquivo(s) estágio.
 
 Para adicionar os arquivos na Stage Area, basta adicionar eles.
