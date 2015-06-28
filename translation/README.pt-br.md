@@ -3,12 +3,13 @@
   width="70"
   align="right"
 />
-# Git Comandos Uteis
+# Git Comandos Úteis
 
 Voltar para versão em [Inglês ](/README.md)
 
-## Sobre 
-> Começou a usar Git recentemente? Esse documento deve lhe dar os principais comandos para comecar a usar o Git de uma forma básica  e simples. Caso não encontre algum comando que o julgue importante para o documento, não hesite, basta apenas [contribuir](#contribuir).  
+## Sobre
+
+Começou a usar Git recentemente? Esse documento deve lhe dar os principais comandos para comecar a usar o Git de uma forma básica  e simples. Caso não encontre algum comando que o julgue importante para o documento, não hesite, basta apenas [contribuir](#contribuir).  
 
 ## Sumário
 
@@ -39,9 +40,9 @@ Git e um sistema de controle de versão distribuído, muito fácil de aprender e
 
 Existem algumas maneiras diferentes de instalar git (da fonte ou pelo Linux) mas o objetivo desta página é se concentrar em comandos do git, por isso estou indo supor que você está instalando o git em um Mac.
 
-Para ver outras maneiras de instalar o Git, visite a [Git official site](http://git-scm.com/book/en/v2/Getting-Started-About-Version-Control)
+Para ver outras maneiras de instalar o Git, visite a [Git site oficial](http://git-scm.com/book/en/v2/Getting-Started-About-Version-Control).
 
-Clique [aqui](http://git-scm.com/download/mac) para baixar e instalar o Git
+Clique [aqui](http://git-scm.com/download/mac) para baixar e instalar o Git.
 
 #### Configurando o Git
 
@@ -49,6 +50,7 @@ Clique [aqui](http://git-scm.com/download/mac) para baixar e instalar o Git
 $ git config --global user.name "User Name"
 
 $ git config --global user.email "email"
+
 ```
 
 #### Aplicando cores ao Git
@@ -73,7 +75,7 @@ Para comecar o versionamento nos arquivos existentes, você deve começar por ra
 $ git add <file>
 $ git add README
 $ git commit -m 'Versão inicial do projeto'
-``` 
+```
 
 
 #### Checkando o status dos arquivos
@@ -99,14 +101,15 @@ $ git status
 # nothing added to commit but untracked files present (use "git add" to track)
 ```
 
-#### Staging Arquivos 
+#### Staging Arquivos
 
 Depois de inicializar um repositório git no diretório escolhido, todos os arquivos serão agora rastreados. Quaisquer alterações feitas a qualquer arquivo será exibido após o comando `$ git status`, sendo esses or arquivos que ainda não estão commitados.
 
-To stage changes for commit you need to add the file(s) - or in other words, stage file(s).
+
+Para stagear alteracoes para inserí-la em um commit, é necessário adicionar os arquivos. Em outras palavras, stagear arquivos.
 
 Para 'Stagear' mudanças para commit você precisa adicionar o(s) arquivo(s) - ou em outras palavras, arquivo(s) estágio.
- 
+
 Para adicionar os arquivos na Stage Area, basta adicionar eles.
 
 ```sh
@@ -180,7 +183,7 @@ $ git rebase -i
 Isto lhe dará uma interface em seu editor de núcleo:
 # Comandos:
 #  p, pick = use commit
-#  r, reword = use commit, mas editar a mensagem do commit 
+#  r, reword = use commit, mas editar a mensagem do commit
 #  e, edit = use commit, mas parar para alterar
 #  s, squash = use commit, mas se juntar ao commit anterior
 #  f, fixup = como o "squash", mas descartar esta mensagem de log no commit
@@ -190,7 +193,7 @@ Isto lhe dará uma interface em seu editor de núcleo:
 #### Branch e Merge
 
 ```sh
-# Criando um branch local 
+# Criando um branch local
 $ git checkout -b nomedobranch
 
 # Alternar entre dois branchs (na verdade, isso iria funcionar no terminal, bem como para alternar entre dois diretórios - $ cd -)
@@ -267,7 +270,7 @@ $ git reset --mixed [sha]
 # Upstream master
 $ git reset HEAD origin/master -- nomedoarquivo
 
-# A versão mais recente do commit 
+# A versão mais recente do commit
 $ git reset HEAD -- nomedoarquivo
 
 # A versão mais recente antes do commit
@@ -400,6 +403,6 @@ lg = log --color --graph --pretty=format:'%Cred%h%Creset -%C(yellow)%d%Creset %s
 
 1. Dê um Fork no repositório!
 2. Crie seu novo branch: `git checkout -b meu-novo-branch`
-3. Commite suas alterações: `git commit -m 'Add some feature'`
-4. Push to the branch: `git push origin meu-novo-branch`
+3. Commite suas alterações: `git commit -m 'Minhas alterações'`
+4. Mande para seu novo branch: `git push origin meu-novo-branch`
 5. Submeta um pull request - Ótimo!
