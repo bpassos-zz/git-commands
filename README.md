@@ -380,6 +380,9 @@ $ git checkout -- filename
 
 # Shows more detailed info about a commit
 $ git cat-file sha -p
+
+# Show number of lines added and removed from a repository by an author since some time in the past.
+$ git log --author="Author name" --pretty=tformat: --numstat --since=month | awk '{ add += $1; subs += $2; loc += $1 - $2 } END { printf "added lines: %s, removed lines: %s, total lines: %s\n", add, subs, loc }'
 ```
 
 #### Useful alias
