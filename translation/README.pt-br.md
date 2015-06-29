@@ -393,7 +393,6 @@ $ git checkout -- nomedoarquivo
 $ git cat-file sha -p
 
 # Mostra o número de linhas adicionadas e removidas em um repositório por um autor desde uma data no passado até o presente
-
 $ git log --author="Nome do autor" --pretty=tformat: --numstat --since=mes | awk '{ add += $1; subs += $2; loc += $1 - $2 } END { printf "added lines: %s, removed lines: %s, total lines: %s\n", add, subs, loc }'
 ```
 
