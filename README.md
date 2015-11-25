@@ -1,4 +1,4 @@
-<img
+﻿<img
   src="/img/git.png"
   width="70"
   align="right"
@@ -246,6 +246,11 @@ $ git merge branchname
 # To cancel a merge
 $ git merge --abort
 ```
+
+#### Updating a local repository with changes from a Github repository
+
+$ git pull origin master
+
 
 #### Tracking existing branch
 
