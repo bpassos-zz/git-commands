@@ -249,8 +249,9 @@ $ git merge --abort
 
 #### Updating a local repository with changes from a Github repository
 
+```sh
 $ git pull origin master
-
+```
 
 #### Tracking existing branch
 
