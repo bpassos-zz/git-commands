@@ -256,6 +256,12 @@ $ git merge nomedobranch
 $ git merge --abort
 ```
 
+#### Atualizando repositório local com mudanças de um repositório do Github
+
+```sh
+$ git pull origin master
+```
+
 #### Acompanhando branch existente
 
 ```sh
