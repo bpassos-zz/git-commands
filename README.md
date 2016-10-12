@@ -218,6 +218,12 @@ $ git branch
 
 # Viewing remote branches
 $ git branch -r
+
+# Rebase master branch into local branch
+$ git rebase origin/master
+
+# Pushing local branch after rebasing master into local branch
+$ git push origin +branchname
 ```
 
 #### Fetching and checking out remote branches
