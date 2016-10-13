@@ -10,7 +10,7 @@ Voltar para versão em [Inglês ](/README.md)
 
 ## Sobre
 
-Começou a usar Git recentemente? Esse documento deve lhe dar os principais comandos para comecar a usar o Git de uma forma básica  e simples. Caso não encontre algum comando que o julgue importante para o documento, não hesite, basta apenas [contribuir](#contribuir).  
+Começou a usar Git recentemente? Esse documento deve lhe dar os principais comandos para comecar a usar o Git de uma forma básica  e simples. Caso não encontre algum comando que o julgue importante para o documento, não hesite, basta apenas [contribuir](#contribuir).
 
 
 ## Sumário
@@ -227,6 +227,12 @@ $ git branch
 
 # Ver branch's remotos
 $ git branch -r
+
+# Rebase master branch na branch local
+$ git rebase origin/master
+
+# Mandando para remote a versao mais nova da branch depois de ter feito o rebase de master na branch
+$ git push origin +branchname
 ```
 
 #### Buscar e verificar branch's remotos
