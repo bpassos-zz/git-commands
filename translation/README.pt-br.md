@@ -424,5 +424,5 @@ lg = log --color --graph --pretty=format:'%Cred%h%Creset -%C(yellow)%d%Creset %s
 1. Dê um Fork no repositório!
 2. Crie seu novo branch: `git checkout -b meu-novo-branch`
 3. Commite suas alterações: `git commit -m 'Minhas alterações'`
-4. Mande para seu novo branch: `git push origin meu-novo-branch`
+4. Mande para seu novo branch: `git push -u origin meu-novo-branch`
 5. Submeta um pull request - Ótimo!
