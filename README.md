@@ -76,6 +76,42 @@ $ git add <file>
 $ git add README
 $ git commit -m 'Initial project version'
 ```
+#### Commands full examples
+##### Clone an existing repository
+To clone and existing repository
+```sh
+git clone https:/github.com/<repo>.git
+cd <repo>
+touch README.md
+git add README.md
+git commit -m "add README"
+git push -u origin master
+```
+the -u in git push stands for [--set-upstream](https://git-scm.com/docs/git-push)
+##### Existing local folder
+```sh
+cd existing_folder
+git init
+git remote add origin https:/github.com/<repo>.git
+git add .
+git commit -m "Initial commit"
+git push -u origin master
+```
+
+##### Existing Git repository
+```sh
+cd existing_repo
+git remote add origin https://github.com/<repo>.git
+git push -u origin --all
+git push -u origin --tags
+```
+
+##### Replace the existing remote url
+```sh
+git remote set-url origin git://new.url.here
+```
+
+
 #### Checking the status of your files
 
 The main tool you use to determine which files are in which state is the `$ git status` command. If you run this command directly after a clone, you should see something like this:
