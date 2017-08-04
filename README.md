@@ -197,8 +197,8 @@ $ git checkout -b branchname
 # Switching between 2 branches (in fact, this would work on terminal as well to switch between 2 directories - $ cd -)
 $ git checkout -
 
-# Pushing local branch to remote
-$ git push -u origin branchname
+# Pushing local branch to remote and set up tracking
+$ git push -u origin HEAD
 
 # Deleting a local branch - this won't let you delete a branch that hasn't been merged yet
 $ git branch -d branchname
