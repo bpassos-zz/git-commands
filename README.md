@@ -76,6 +76,20 @@ $ git add <file>
 $ git add README
 $ git commit -m 'Initial project version'
 ```
+#### Adding a submodule
+
+ Submodules allow you to keep a Git repository as a subdirectory of another Git repository. This lets you clone another repository into your project and keep your commits separate.
+
+```sh
+ $ git submodule add https://github.com/user/repo.git
+```
+
+#### Removing a submodule
+
+```sh
+$ git submodule deinit -f submodule_name
+```
+
 #### Checking the status of your files
 
 The main tool you use to determine which files are in which state is the `$ git status` command. If you run this command directly after a clone, you should see something like this:
