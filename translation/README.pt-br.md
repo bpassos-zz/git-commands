@@ -5,12 +5,12 @@
 />
 # Git Comandos Úteis
 
-Voltar para versão em [Inglês ](/README.md)
+Voltar para a versão em [Inglês ](/README.md)
 
 
 ## Sobre
 
-Começou a usar Git recentemente? Esse documento deve lhe dar os principais comandos para comecar a usar o Git de uma forma básica  e simples. Caso não encontre algum comando que o julgue importante para o documento, não hesite, basta apenas [contribuir](#contribuir).
+Começou a usar Git recentemente? Esse documento deve lhe dar os principais comandos para começar a usar o Git de uma forma básica e simples. Caso não encontre algum comando que julgue importante para o documento, não hesite, basta apenas [contribuir](#contribuir).
 
 
 ## Sumário
@@ -36,11 +36,11 @@ Começou a usar Git recentemente? Esse documento deve lhe dar os principais coma
 
 #### Git
 
-Git e um sistema de controle de versão distribuído, muito fácil de aprender e super rápido!
+Git é um sistema de controle de versão distribuído, muito fácil de aprender e super rápido!
 
 #### Instalando o Git
 
-Existem algumas maneiras diferentes de instalar git (da fonte ou pelo Linux) mas o objetivo desta página é se concentrar em comandos do git, por isso estou indo supor que você está instalando o git em um Mac.
+Existem algumas maneiras diferentes de instalar git (a depender do sistema operacional utilizado) mas o objetivo desta página é se concentrar em comandos do git, por isso estou supondo que você está instalando o git em um Mac.
 
 Para ver outras maneiras de instalar o Git, visite a [Git site oficial](http://git-scm.com/book/en/v2/Getting-Started-About-Version-Control).
 
@@ -61,7 +61,7 @@ $ git config --global user.email "email"
 $ git config --global color.ui true
 ```
 
-#### Inicializando um repositorio em diretorio existente
+#### Inicializando um repositório em um diretório existente
 
 Se você está começando a rastrear um projeto existente no Git, você precisa ir ao diretório e tipo do projeto:
 
