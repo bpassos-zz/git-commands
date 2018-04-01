@@ -155,3 +155,33 @@ $ git stash list
 $ git diff stash@{0}
 ```
 
+#### Consolidando archivos
+
+Después de agregar o guardar provisionalmente un archivo, el siguiente paso es consolidar (commit) el o los archivos preparados.
+
+```sh
+# Consolidar archivo/s preparado/s
+$ git commit -m 'mensaje de consolidación'
+
+# Agregar un archivo y commit
+$ git commit nombreDeArchivo -m "mensaje de consolidación'
+
+# Enmendar un commit
+$ git commit --amend 'nuevo mensaje de consolidación' o sin mensaje para mantener el mensaje anterior.
+
+# Apiñar commits juntos
+$ git rebase -i
+Esto te proporcionará una interface en tu editor base:
+# Comandos:
+# p, pick = usar commit
+# r, reword = usar commit, pero editar el mensaje del commit
+# e, edit = usar commit, pero parar de enmendar
+# s, squash = usar commit, pero combinar con el commit previo
+# f, fixup = como "squash", pero descarta el log de mensajes de commit
+# x, exec = corre comando (el resto de la línea) utilizando el shell
+
+# Apiñar commits juntos usando reset --soft
+$ git reset --sfot HEAD~number_of_commits
+$ git commit
+** ADVERTENCIA: esto requerirá de commits mandados a la fuerza, lo cual está BIEN si esto está en una rama antes de hacer push a master o crear un Pull Request.
+```
