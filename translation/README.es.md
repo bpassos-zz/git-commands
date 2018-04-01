@@ -80,4 +80,24 @@ $git add README
 $git commit -m 'Versión inicial del proyecto.'
 ```
 
-  
+##### Verificando el estado de tus archivos
+
+La herramienta principal que se utiliza para determinar qué archivos están en qué estado es con el comando `$ git status`. Si corres este comando directamente después de una clonación, deberías ver algo como esto:
+
+```sh
+$ git status
+# On branch master
+nothing to commit (working directory clean)
+```
+
+Si agregas un nuevo archivo al proyecto, y si el archivo no existía anteriormente, cuando corras un `$ git status` deberías ver tu archivo sin seguimiento así:
+
+```sh
+$ git status
+# On branch master
+# Untracked files:
+#   (use "git add <file>..." to include in what will be committed)
+#
+#   README
+nothing added to commit but untracked files present (use "git add" to track)
+```
