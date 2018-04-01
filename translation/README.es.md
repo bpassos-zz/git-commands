@@ -36,3 +36,28 @@ Volver a la versión en [Inglés](/README.md).
 * [Alias útiles](#alias-útiles)
 * [Contribuyendo](#contribuyendo)
 
+#### Git
+
+Git es un sistema de control de versiones distribuidos, ¡muy fácil de aprender y súper rápido!
+
+#### Instalar Git
+
+Hay algunas maneras diferentes de instalar git (desde la fuente o para Linux) pero el propósito de esta página es centrarse en comandos de git, así que vamos a asumir que estás instalando git en Mac.
+
+Para mirar otras maneras de instalarlo vista el [sitio oficial de Git](http://git-scm.com/book/en/Getting-Started-Installing-Git)
+
+Click [aquí](http://git-scm.com/download/mac) para descargar e instalar Git
+
+##### Configurando git
+
+```sh
+$git config --global user.name "Nombre de usuario"
+
+$git config --global user.email "email"
+```
+
+##### Aplicando color a Git
+
+```sh
+$ git config --global color.ui true
+```
