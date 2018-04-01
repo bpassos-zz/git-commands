@@ -292,16 +292,126 @@ $ git reset --hard
 #### Git remoto
 
 ```sh
-# Mostrar hacia donde está apuntando 'origin' y también las ramas a las que se están haciendo seguimiento
+# Muestra hacia donde está apuntando 'origin' y también las ramas a las que se están haciendo seguimiento
 $ git remote show origin
 
-# Mostrar hacia donde está apuntando 'origin'
+# Muestra hacia donde está apuntando 'origin'
 $ git remote -v
 
-# Cambiar la url remote de 'origin'
+# Cambia la url remota de 'origin'
 $ git remote set-url origin https://github.com/user/repo.git
 
-# Agregar un nuevo 'origin'
+# Agrega un nuevo 'origin'
 # Usualmente utilizado para traspasar (rebase) desde bifurcaciones (forks)
 $ git remote add [NOMBRE] https://hithub.com/user/fork-repo.git
 ```
+
+#### Git grep
+
+```sh
+# 'Busca' por partes de cadenas de caracteres en un directorio
+$ git grep 'algo'
+
+# 'Busca' por partes de cadenas de caracteres en un directorio y el -n imprime el número de líneas donde git ha encontrado equivalencias.
+$ git grep -n 'algo'
+
+# 'Busca' por partes de cadenas de caracteres en un contexto (algunas líneas antes y algunas después del término grepped) 
+$ git grep -C<número de líneas> 'algo'
+
+# 'Busca' por partes de cadenas de caracteres y también muestra las líneas ANTES del término grepped
+$ git grep -B<número de líneas> 'algo' 
+
+# 'Busca' por partes de cadenas de caracteres y también muestra las líneas DESPUÉS del término grepped
+$ git grep -A<número de líneas> 'algo'
+```
+
+#### Git blame
+
+```sh
+# Muestra historial de alteración de un archivo con el nombre del autor
+$ git blame [nombreDelArchivo]
+
+# Muestra historial de alteración de un archivo con el nombre del autor && SHA
+$ git blame [nombreDelArchivo] -l
+```
+
+#### Git log
+
+```sh
+# Muestra la lista de todos los commits en un repositorio. Este comando muestra absolutamente todo acerca de un commit, tal como ID del commit, autor, fecha y el mensaje del commit.
+$ git log
+
+# Listado de commits mostrando los mensajes de commits y los cambios
+$ git log -p
+
+# Listado de commits con la expresión en particular que estás buscando
+$ git log -S 'algo'
+
+# Listado de commits por autor
+$ git log --author 'Nombre del autor'
+
+# Muestra un listado de commits en un repositorio de una manera más resumida. Este muestra una versión corta del ID del commit y el mensaje del commit.
+$ git log --oneline
+
+# Muestra un listado de commits en un repositorio desde ayer
+$ git log --since=yesterday
+
+# Muestra el log por autor y buscando por un término en específico dentro del mensaje del commit
+$ git log --grep "término" --author "nombre"
+
+#### Verificando que estás consolidando
+
+```sh
+# Muestra todos los cambios (no-preparados) hechos en un repositorio local
+$ git diff
+
+# Muestra todos los cambios (preparados) hechos en un repositorio local
+$ git diff --cached
+
+# Verifica los cambios que has consolidado entre los archivos y el repositorio en vivo.
+$ git diff --stat origin/master
+
+#### Comandos útiles
+
+```sh
+# Verifica si un sha está en producción
+$ git tag --contains [sha]
+
+# Número de commits por autor
+$ git shortlog -s --author 'Nombre del autor'
+
+# Listado de autores y commits de un repositorio ordenados alfabéticamente
+$git shortlog -s -n
+
+# Listado de comentarios de commits por autor
+$ git shortlog -n --author 'Nombre del autor'
+# Esto también muestra el número total de commits por autor
+
+# Número de commits por contribuidores
+$git shortlog -s -n
+
+# Deshacer cambios locales a un archivo
+$ git checkout -- nombreDelArchivo
+
+# Muestra información más detallada acerca de un commit
+$ git cat-file sha -p
+
+# Muestra el número de líneas agregadas y eliminadas de un repositorio por un autor desde hace algún tiempo.
+$ git log --author="Author name" --pretty=tformat: --numstat --since=month | awk '{ add += $1; subs += $2; loc += $1 - $2 } END { printf "added lines: %s, removed lines: %s, total lines: %s\n", add, subs, loc }'
+```
+
+#### Alias útiles
+Para agregar un alias, simplemente abre tu archivo .gitconfig en tu directorio raíz e incluye el código de alias
+
+```sh
+# Muestra el log en un modo más consistente con una gráfica para ramificaciones y fusiones.
+lg = log --color --graph --pretty=format:'%Cred%h%Creset -%C(yellow)%d%Creset %s %Cgreen(%cr) %C(bold blue)<%an>%Creset' --abbrev-commit
+```
+
+### Contribuyendo
+
+1. ¡Bifucarlo! (Fork it)
+2. Crea tu rama de características: `git checkout -b mi-nueva-caracteristica`
+3. Consolida tus cambios: `git commit -m 'Agrega nueva característica'`
+4. Push a la rama: `git push -u origin mi-nueva-caracteristica`
+5. Envía un pull request - ¡gracias!
