@@ -23,7 +23,7 @@ Volver a la versión en [Inglés](/README.md).
 * [Inicializando un repositorio en un directorio existente](#inicializando-un-repositorio-en-un-directorio-existente)
 * [Verificando el estado de tus archivos](#chequeando-el-estado-de-tus-archivos)
 * [Preparar archivos](#preparar-archivos)
-* [Ocultar archivos](#ocultar-archivos)
+* [Guardar archivos provisionalmente](#guardar-archivos-provisionalmente)
 * [Consolidar archivos](#consolidar-archivos)
 * [Ramificaciones y fusiones](#ramificaciones-y-fusiones)
 * [Restableciendo](#restableciendo)
