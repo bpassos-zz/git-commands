@@ -61,3 +61,23 @@ $git config --global user.email "email"
 ```sh
 $ git config --global color.ui true
 ```
+
+##### Inicializando un repositorio en un directorio existente
+
+Si estás comenzando a realizar un seguimiento de un proyecto en Git, debes ir al directorio del proyecto y escribir:
+
+```sh
+$ git init
+```
+
+Esto creará un nuevo subdirectorio llamado .git que contiene todos tus archivos de repositorio necesarios - un esqueleto de repositorio Git. Llegados a este punto, nada en tu proyecto tiene seguimiento todavía.
+
+Para comenzar a versionar-controlar archivos existentes deberías empezar por hacerle seguimiento a esos archivos y hacer una consolidación (commit) inicial. Para llevarlo a cabo debes empezar con algunos `$git add` que especifiquen los archivos a los que quieres hacerles seguimiento seguido de un commit.
+
+```sh
+$git add <archivo>
+$git add README
+$git commit -m 'Versión inicial del proyecto.'
+```
+
+  
