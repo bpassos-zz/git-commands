@@ -288,3 +288,20 @@ $ git reset --hard sha
 # Reiniciar el área de preparación y el directorio de trabajo para asemejar el commit más reciente. En adición a los cambios sin preparar, la bandera --hard le dice a Git que sobreescriba todos los cambios en el directorio de trabajo también.
 $ git reset --hard
 ```
+
+#### Git remoto
+
+```sh
+# Mostrar hacia donde está apuntando 'origin' y también las ramas a las que se están haciendo seguimiento
+$ git remote show origin
+
+# Mostrar hacia donde está apuntando 'origin'
+$ git remote -v
+
+# Cambiar la url remote de 'origin'
+$ git remote set-url origin https://github.com/user/repo.git
+
+# Agregar un nuevo 'origin'
+# Usualmente utilizado para traspasar (rebase) desde bifurcaciones (forks)
+$ git remote add [NOMBRE] https://hithub.com/user/fork-repo.git
+```
