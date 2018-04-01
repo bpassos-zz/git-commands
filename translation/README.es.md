@@ -8,12 +8,12 @@
 
 # Comandos útiles de Git
 
-También puedes leer la versión en [Portugués](translation/README.pt-br.md).
+También puedes leer la versión en [Portugués](/README.pt-br.md).
 
 Volver a la versión en [Inglés](/README.md).
 
 ## Sobre
-> ¿Has comenzado a utilizar Git recientemente? Esta documentación debería darte los comandos básicos necesarios para realizar las acciones más comunes en Git. Si encuentras un comando que no esté listado acá, o que podría ser explicado de una mejor manera, por favor no dudes en [Contribuir](#contributing). ¡Saludos!
+> ¿Has comenzado a utilizar Git recientemente? Esta documentación debería darte los comandos básicos necesarios para realizar las acciones más comunes en Git. Si encuentras un comando que no esté listado acá, o que podría ser explicado de una mejor manera, por favor no dudes en [contribuir](#contribuyendo). ¡Saludos!
 
 ## Tabla de contenidos
 
@@ -42,18 +42,18 @@ Git es un sistema de control de versiones distribuidos, ¡muy fácil de aprender
 
 #### Instalar Git
 
-Hay algunas maneras diferentes de instalar git (desde la fuente o para Linux) pero el propósito de esta página es centrarse en comandos de git, así que vamos a asumir que estás instalando git en Mac.
+Hay diferentes maneras de instalar git (desde la fuente o para Linux) pero el propósito de esta página es centrarse en comandos de git, así que vamos a asumir que estás instalando git en Mac.
 
-Para mirar otras maneras de instalarlo vista el [sitio oficial de Git](http://git-scm.com/book/en/Getting-Started-Installing-Git)
+Para mirar otras maneras de instalarlo visita el [sitio oficial de Git](http://git-scm.com/book/en/Getting-Started-Installing-Git)
 
 Click [aquí](http://git-scm.com/download/mac) para descargar e instalar Git
 
 ##### Configurando git
 
 ```sh
-$git config --global user.name "Nombre de usuario"
+$ git config --global user.name "Nombre de usuario"
 
-$git config --global user.email "email"
+$ git config --global user.email "email"
 ```
 
 ##### Aplicando color a Git
@@ -75,9 +75,9 @@ Esto creará un nuevo subdirectorio llamado .git que contiene todos tus archivos
 Para comenzar a versionar-controlar archivos existentes deberías empezar por hacerle seguimiento a esos archivos y hacer una consolidación (commit) inicial. Para llevarlo a cabo debes empezar con algunos `$git add` que especifiquen los archivos a los que quieres hacerles seguimiento seguido de un commit.
 
 ```sh
-$git add <archivo>
-$git add README
-$git commit -m 'Versión inicial del proyecto.'
+$ git add <archivo>
+$ git add README
+$ git commit -m 'Versión inicial del proyecto.'
 ```
 
 ##### Verificando el estado de tus archivos
@@ -110,7 +110,7 @@ Para preparar archivos para un commit, necesitarás agregar el o los archivos - 
 
 ```
 # Agregando un archivo
-# git add nombreDelArchivo
+$ git add nombreDelArchivo
 
 # Agregando todos los archivos
 $ git add -A
@@ -124,7 +124,7 @@ $ git add -p
 
 #### Guardar archivos provisionalmente
 
-` $git stash` es un comando muy útil, donde git añadirá los cambios en un directorio sucio - pero no te preocupes, puedes reaplicarlos luego. Este comando guardará tus cambios locales por fuera y revertirá el directorio de trabajo para que asemeje el commit de cabecera (HEAD).
+`$ git stash` es un comando muy útil, donde git añadirá los cambios en un directorio sucio - pero no te preocupes, puedes reaplicarlos luego. Este comando guardará tus cambios locales por fuera y revertirá el directorio de trabajo para que asemeje el commit de cabecera (HEAD).
 
 ```sh
 # Guardar provisionalmente cambios locales
