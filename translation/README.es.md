@@ -185,3 +185,82 @@ $ git reset --sfot HEAD~number_of_commits
 $ git commit
 ** ADVERTENCIA: esto requerirá de commits mandados a la fuerza, lo cual está BIEN si esto está en una rama antes de hacer push a master o crear un Pull Request.
 ```
+
+##### Ramificaciones y fusiones
+
+```sh
+# Creando una rama local
+$ git checkout -b nombreDeLaRama
+
+# Cambiando entre 2 ramas (de hecho, esto funciona en una terminal como al cambiar entre 2 directorios - $ cd -)
+$ git checkout -
+
+# Mandando rama local a remoto
+$ git push -u origin nombreDeLaRama
+
+# Eliminando una rama local - esto no eliminará una rama que no ha sido fusionada todavía
+$ git branch -d nombreDeLaRama
+
+# Eliminando una rama local - ¡esto ELIMINARÁ una rama incluso si no ha sido fusionada todavía!
+$ git branch -D nombreDeLaRama
+
+# Remueve cualquier referencia remota que haya eliminado localmente de su remoto (puedes sustituir <origin> con cualquier rama remota)
+$ git remote prune origin
+
+# Ver todas las ramas, incluyendo ramas locales y remotas
+$ git branch -a
+
+# Ver todas las ramas que han sido fusionadas en tu rama actual, incluyendo las locales y remotas
+$ git branch -a --merged
+
+# Ver todas las ramas que no han sido fusionadas en tu rama actual, incluyendo las locales y remotas
+$ git branch -a --merged
+
+# Ver ramas locales
+$ git branch -r
+
+# Traspasa la rama master a tu rama local
+$ git rebase origin/master
+
+# Manda la rama local después de un traspaso (rebase) de master a tu rama local
+$ git push origin +branchname
+```
+
+#### Trayendo y verificando nuestras ramas remotas
+
+```sh
+# Esto traerá todas las ramas remotas hacia ti.
+$ git fetch origin
+
+# Con las ramas remotas en mano, ahora necesitas verificar la rama en la que estás interesado, dándote una copia de trabajo local:
+$ git checkout -b test origin/test
+
+# Eliminando una rama remota
+$ git branch -rd origin/branchname
+$ git push origin --delete nombreDeLaRama o $ git push origin:nombreDeLaRama
+```
+
+#### Fusionando ramas a trunk/master
+
+```sh
+# Primer checkout trunk/master
+$ git checkout trunk/master
+
+# Ahora fusiona la rama a trunk/master
+$ git merge nombreDeLaRama
+
+# Para cancelar una fusión
+$ git merge --abort
+```
+
+#### Actualizando un repositorio local con cambios de un repositorio de Github
+
+```sh
+$ git pull origin master
+```
+
+#### Seguimiento de una rama existente
+
+```sh
+$ git branch --set-upstream-to=origin/foo foo
+```
