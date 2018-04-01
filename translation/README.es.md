@@ -101,3 +101,22 @@ $ git status
 #   README
 nothing added to commit but untracked files present (use "git add" to track)
 ```
+
+#### Preparar archivos
+
+Después de inicializar un repositorio de git en el directorio escogido, todos tus archivos estarán en seguimiento. Cualquier cambio hecho a cualquier archivo se mostrarán después de un `$ git status` si los cambios no fueron preparados para un commit.
+
+Para preparar archivos para un commit, necesitarás agregar el o los archivos - o en palabras más técnicas, prepararlos.
+
+```
+# Agregando un archivo
+# git add nombreDelArchivo
+
+# Agregando todos los archivos
+$ git add -A
+
+# Agregando todos los cambios de archivos en un directorio
+$ git add .
+
+# Escogiendo que cambios agregar (esto irá a través de todos tus cambios y puedes elegir 'Y' o 'N' a los cambios=
+$ git add -p
