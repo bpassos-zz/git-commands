@@ -72,7 +72,7 @@ $ git init
 
 Esto creará un nuevo subdirectorio llamado .git que contiene todos tus archivos de repositorio necesarios - un esqueleto de repositorio Git. Llegados a este punto, nada en tu proyecto tiene seguimiento todavía.
 
-Para comenzar a versionar-controlar archivos existentes deberías empezar por hacerle seguimiento a esos archivos y hacer una consolidación (commit) inicial. Para llevarlo a cabo debes empezar con algunos `$git add` que especifiquen los archivos a los que quieres hacerles seguimiento seguido de un commit.
+Para comenzar a versionar-controlar archivos existentes deberías empezar por hacerle seguimiento a esos archivos y hacer una consolidación (commit) inicial. Para llevarlo a cabo debes empezar con algunos `$ git add` que especifiquen los archivos a los que quieres hacerles seguimiento seguido de un commit.
 
 ```sh
 $ git add <archivo>
@@ -136,7 +136,7 @@ $ git stash save "este es tu mensaje personalizado"
 # Reaplicar los cambios locales que guardaste en el último stash
 $ git stash apply
 
-# Reaplicar los cambios locales que guardaste en un número de stash dado
+# Reaplicar los cambios locales que guardaste en un número de stash otorgado
 $ git stash apply stash@{stash_number}
 
 # Arroja cualquier stash por su número
@@ -151,7 +151,7 @@ $ git stash pop stash@{stash_number}
 # Lista todos los stashes
 $ git stash list
 
-# Difiere los detalles de un número de stash dado
+# Difiere los detalles de un número de stash otorgado
 $ git diff stash@{0}
 ```
 
@@ -181,7 +181,7 @@ Esto te proporcionará una interface en tu editor base:
 # x, exec = corre comando (el resto de la línea) utilizando el shell
 
 # Apiñar commits juntos usando reset --soft
-$ git reset --sfot HEAD~number_of_commits
+$ git reset --soft HEAD~number_of_commits
 $ git commit
 ** ADVERTENCIA: esto requerirá de commits mandados a la fuerza, lo cual está BIEN si esto está en una rama antes de hacer push a master o crear un Pull Request.
 ```
@@ -214,7 +214,7 @@ $ git branch -a
 $ git branch -a --merged
 
 # Ver todas las ramas que no han sido fusionadas en tu rama actual, incluyendo las locales y remotas
-$ git branch -a --merged
+$ git branch -a --no-merged
 
 # Ver ramas locales
 $ git branch -r
@@ -232,7 +232,7 @@ $ git push origin +branchname
 # Esto traerá todas las ramas remotas hacia ti.
 $ git fetch origin
 
-# Con las ramas remotas en mano, ahora necesitas verificar la rama en la que estás interesado, dándote una copia de trabajo local:
+# Con las ramas remotas en mano, ahora necesitas verificar la rama en la que estás interesado, otorgándote una copia local del trabajo:
 $ git checkout -b test origin/test
 
 # Eliminando una rama remota
@@ -268,7 +268,7 @@ $ git branch --set-upstream-to=origin/foo foo
 #### Restableciendo
 
 ```sh
-# Mezcla tu cabecera con un sha dado
+# Mezcla tu cabecera con un sha otorgado
 # Esto te permite hacer cosas como dividir un commit
 $ git reset --mixed [sha]
 
