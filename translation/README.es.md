@@ -264,3 +264,27 @@ $ git pull origin master
 ```sh
 $ git branch --set-upstream-to=origin/foo foo
 ```
+
+#### Restableciendo
+
+```sh
+# Mezcla tu cabecera con un sha dado
+# Esto te permite hacer cosas como dividir un commit
+$ git reset --mixed [sha]
+
+# Upstream master
+$ git reset HEAD origin/master -- nombreDelArchivo
+
+# La versión del commit más reciente
+$ git reset HEAD -- nombreDelArchivo
+
+# La versión antes del commit más reciente
+
+$ git reset HEAD^ -- nombreDelArchivo
+
+# Mover cabecera a un commit en específico
+$ git reset --hard sha
+
+# Reiniciar el área de preparación y el directorio de trabajo para asemejar el commit más reciente. En adición a los cambios sin preparar, la bandera --hard le dice a Git que sobreescriba todos los cambios en el directorio de trabajo también.
+$ git reset --hard
+```
