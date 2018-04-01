@@ -118,5 +118,40 @@ $ git add -A
 # Agregando todos los cambios de archivos en un directorio
 $ git add .
 
-# Escogiendo que cambios agregar (esto irá a través de todos tus cambios y puedes elegir 'Y' o 'N' a los cambios=
+# Escogiendo que cambios agregar (esto irá a través de todos tus cambios y puedes elegir 'Y' o 'N' a los cambios)
 $ git add -p
+```
+
+#### Guardar archivos provisionalmente
+
+` $git stash` es un comando muy útil, donde git añadirá los cambios en un directorio sucio - pero no te preocupes, puedes reaplicarlos luego. Este comando guardará tus cambios locales por fuera y revertirá el directorio de trabajo para que asemeje el commit de cabecera (HEAD).
+
+```sh
+# Guardar provisionalmente cambios locales
+$ git stash
+
+# Guardar provisionalmente cambios locales con un mensaje personalizado
+$ git stash save "este es tu mensaje personalizado"
+
+# Reaplicar los cambios locales que guardaste en el último stash
+$ git stash apply
+
+# Reaplicar los cambios locales que guardaste en un número de stash dado
+$ git stash apply stash@{stash_number}
+
+# Arroja cualquier stash por su número
+$ git stash drop stash@{0}
+
+# Aplicar el stash e inmediatamente retirarlo de la pila
+$ git stash pop
+
+# 'Libera' un stash en particular de tu lista de stashes
+$ git stash pop stash@{stash_number}
+
+# Lista todos los stashes
+$ git stash list
+
+# Difiere los detalles de un número de stash dado
+$ git diff stash@{0}
+```
+
