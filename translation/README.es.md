@@ -21,7 +21,7 @@ Volver a la versión en [Inglés](/README.md).
 * [Configurando Git](#configurando-git)
 * [Aplicando color a Git](#aplicando-color-a-git)
 * [Inicializando un repositorio en un directorio existente](#inicializando-un-repositorio-en-un-directorio-existente)
-* [Verificando el estado de tus archivos](#chequeando-el-estado-de-tus-archivos)
+* [Verificando el estado de tus archivos](#verificando-el-estado-de-tus-archivos)
 * [Preparar archivos](#preparar-archivos)
 * [Guardar archivos provisionalmente](#guardar-archivos-provisionalmente)
 * [Consolidar archivos](#consolidar-archivos)
@@ -31,7 +31,7 @@ Volver a la versión en [Inglés](/README.md).
 * [Git grep](#git-grep)
 * [Git blame](#git-blame)
 * [Git log](#git-log)
-* [Verificando que estás consolidando](#verificando-que-estás-consolidando)
+* [Verificando lo consolidando](#verificando-lo-consolidando)
 * [Comandos útiles](#comandos-útiles)
 * [Alias útiles](#alias-útiles)
 * [Contribuyendo](#contribuyendo)
@@ -155,7 +155,7 @@ $ git stash list
 $ git diff stash@{0}
 ```
 
-#### Consolidando archivos
+#### Consolidar archivos
 
 Después de agregar o guardar provisionalmente un archivo, el siguiente paso es consolidar (commit) el o los archivos preparados.
 
@@ -357,8 +357,9 @@ $ git log --since=yesterday
 
 # Muestra el log por autor y buscando por un término en específico dentro del mensaje del commit
 $ git log --grep "término" --author "nombre"
+```
 
-#### Verificando que estás consolidando
+#### Verificando lo consolidado
 
 ```sh
 # Muestra todos los cambios (no-preparados) hechos en un repositorio local
@@ -369,6 +370,7 @@ $ git diff --cached
 
 # Verifica los cambios que has consolidado entre los archivos y el repositorio en vivo.
 $ git diff --stat origin/master
+```
 
 #### Comandos útiles
 
