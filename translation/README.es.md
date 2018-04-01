@@ -31,7 +31,7 @@ Volver a la versión en [Inglés](/README.md).
 * [Git grep](#git-grep)
 * [Git blame](#git-blame)
 * [Git log](#git-log)
-* [Verificando lo consolidando](#verificando-lo-consolidando)
+* [Verificando lo consolidado](#verificando-lo-consolidado)
 * [Comandos útiles](#comandos-útiles)
 * [Alias útiles](#alias-útiles)
 * [Contribuyendo](#contribuyendo)
