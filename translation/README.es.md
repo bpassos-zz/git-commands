@@ -108,7 +108,7 @@ Después de inicializar un repositorio de git en el directorio escogido, todos t
 
 Para preparar archivos para un commit, necesitarás agregar el o los archivos - o en palabras más técnicas, prepararlos.
 
-```
+```sh
 # Agregando un archivo
 $ git add nombreDelArchivo
 
@@ -161,10 +161,10 @@ Después de agregar o guardar provisionalmente un archivo, el siguiente paso es 
 
 ```sh
 # Consolidar archivo/s preparado/s
-$ git commit -m 'mensaje de consolidación'
+$ git commit -m "mensaje de consolidación"
 
 # Agregar un archivo y commit
-$ git commit nombreDeArchivo -m "mensaje de consolidación'
+$ git commit nombreDeArchivo -m "mensaje de consolidación"
 
 # Enmendar un commit
 $ git commit --amend 'nuevo mensaje de consolidación' o sin mensaje para mantener el mensaje anterior.
@@ -279,7 +279,6 @@ $ git reset HEAD origin/master -- nombreDelArchivo
 $ git reset HEAD -- nombreDelArchivo
 
 # La versión antes del commit más reciente
-
 $ git reset HEAD^ -- nombreDelArchivo
 
 # Mover cabecera a un commit en específico
@@ -328,10 +327,10 @@ $ git grep -A<número de líneas> 'algo'
 #### Git blame
 
 ```sh
-# Muestra historial de alteración de un archivo con el nombre del autor
+# Muestra el historial de alteración de un archivo con el nombre del autor
 $ git blame [nombreDelArchivo]
 
-# Muestra historial de alteración de un archivo con el nombre del autor && SHA
+# Muestra el historial de alteración de un archivo con el nombre del autor && SHA
 $ git blame [nombreDelArchivo] -l
 ```
 
