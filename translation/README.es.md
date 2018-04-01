@@ -8,7 +8,7 @@
 
 # Comandos útiles de Git
 
-También puedes leer la versión en [Portugués](/README.pt-br.md).
+También puedes leer la versión en [Portugués](/translation/README.pt-br.md).
 
 Volver a la versión en [Inglés](/README.md).
 
