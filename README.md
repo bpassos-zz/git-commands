@@ -23,6 +23,7 @@ You can also read the [Portuguese](translation/README.pt-br.md) version.
 * [Staging files](#staging-files)
 * [Stashing files](#stashing-files)
 * [Committing files](#committing-files)
+* [Rebase commits](#rebase)
 * [Branching and merging](#branching-and-merging)
 * [Resetting](#resetting)
 * [Git remote](#git-remote)
@@ -171,7 +172,18 @@ $ git commit -am 'insert commit message'
 # Amending a commit
 $ git commit --amend 'new commit message' or no message to maintain previous message
 
-# Squashing commits together
+# Squashing commits together using reset --soft
+$ git reset --soft HEAD~number_of_commits
+$ git commit
+** WARNING: this will require force pushing commits, which is OK if this is on a branch before you push to master or create a Pull Request.
+```
+
+#### Rebase
+
+Reapply commits on top of another base tip
+
+```sh
+# Rebasing commits
 $ git rebase -i
 This will give you an interface on your core editor:
 # Commands:
@@ -182,10 +194,14 @@ This will give you an interface on your core editor:
 #  f, fixup = like "squash", but discard this commit's log message
 #  x, exec = run command (the rest of the line) using shell
 
-# Squashing commits together using reset --soft
-$ git reset --soft HEAD~number_of_commits
-$ git commit
-** WARNING: this will require force pushing commits, which is OK if this is on a branch before you push to master or create a Pull Request.
+# Rebasing just some last commits
+$ git rebase -i HEAD~[number_of_commits]
+
+# Continue the rebase
+$ git rebase --continue
+
+# Abort the rebase
+$ git rebase --abort
 ```
 
 #### Branching and merging
